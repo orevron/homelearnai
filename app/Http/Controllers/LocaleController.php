@@ -48,7 +48,7 @@ class LocaleController extends Controller
     public function updateLocale(Request $request): JsonResponse
     {
         $request->validate([
-            'locale' => 'required|string|in:en,ru,he',
+            'locale' => 'required|string|in:en,ru',
         ]);
 
         $locale = $request->input('locale');
@@ -268,7 +268,7 @@ class LocaleController extends Controller
     {
         try {
             // Validate locale
-            if (! in_array($locale, ['en', 'ru', 'he'])) {
+            if (! in_array($locale, ['en', 'ru'])) {
                 return response()->json([
                     'success' => false,
                     'message' => 'Invalid locale',
@@ -319,11 +319,6 @@ class LocaleController extends Controller
                     'name' => 'Russian',
                     'native' => 'Русский',
                     'flag' => '🇷🇺',
-                ],
-                'he' => [
-                    'name' => 'Hebrew',
-                    'native' => 'עברית',
-                    'flag' => '🇮🇱',
                 ],
             ];
 

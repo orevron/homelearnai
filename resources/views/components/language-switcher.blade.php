@@ -10,11 +10,6 @@
             'name' => __('Russian'),
             'native' => 'Русский',
             'flag' => '🇷🇺'
-        ],
-        'he' => [
-            'name' => __('Hebrew'),
-            'native' => 'עברית',
-            'flag' => '🇮🇱'
         ]
     ];
     $currentLocaleData = $locales[$currentLocale] ?? $locales['en'];
