@@ -47,6 +47,7 @@
             <select id="locale" name="locale" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
                 <option value="en" {{ old('locale', App::getLocale()) == 'en' ? 'selected' : '' }}>🇬🇧 English</option>
                 <option value="ru" {{ old('locale', App::getLocale()) == 'ru' ? 'selected' : '' }}>🇷🇺 Русский</option>
+                <option value="he" {{ old('locale', App::getLocale()) == 'he' ? 'selected' : '' }}>🇮🇱 עברית</option>
             </select>
             @error('locale')
                 <span class="mt-2 text-sm text-red-600">{{ $message }}</span>
