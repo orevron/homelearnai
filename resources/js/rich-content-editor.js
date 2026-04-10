@@ -55,6 +55,7 @@ window.richContentEditor = () => ({
             selector,
             height: 400,
             menubar: false,
+            directionality: window.currentLocale === 'he' ? 'rtl' : 'ltr',
             plugins: [
                 'link', 'image', 'media', 'table', 'code', 'codesample',
                 'lists', 'advlist', 'preview', 'wordcount', 'fullscreen', 'autoresize'
@@ -77,15 +78,15 @@ window.richContentEditor = () => ({
                     border-radius: 0.375rem;
                 }
                 .callout.warning {
-                    border-left-color: #f59e0b;
+                    border-start-color: #f59e0b;
                     background-color: #fffbeb;
                 }
                 .callout.error {
-                    border-left-color: #ef4444;
+                    border-start-color: #ef4444;
                     background-color: #fef2f2;
                 }
                 .callout.success {
-                    border-left-color: #10b981;
+                    border-start-color: #10b981;
                     background-color: #f0fdf4;
                 }
             `,

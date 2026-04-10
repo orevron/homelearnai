@@ -24,7 +24,7 @@
                         <input type="checkbox" 
                                name="selected_cards[]" 
                                value="{{ $flashcard->id }}" 
-                               class="mt-1 mr-3 text-blue-600 focus:ring-blue-500 card-checkbox" 
+                               class="mt-1 me-3 text-blue-600 focus:ring-blue-500 card-checkbox" 
                                checked
                                onchange="updateSelectedCount()">
                         

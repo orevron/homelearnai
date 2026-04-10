@@ -20,14 +20,14 @@
                     <div class="space-y-2">
                         {{-- Answer placeholder --}}
                         <div class="flex items-center">
-                            <div class="w-4 h-4 bg-gray-200 rounded mr-2"></div>
+                            <div class="w-4 h-4 bg-gray-200 rounded me-2"></div>
                             <div class="h-3 bg-gray-200 rounded w-1/2"></div>
                         </div>
                         
                         {{-- Hint placeholder (random) --}}
                         @if($i % 2 === 0)
                             <div class="flex items-center">
-                                <div class="w-4 h-4 bg-gray-200 rounded mr-2"></div>
+                                <div class="w-4 h-4 bg-gray-200 rounded me-2"></div>
                                 <div class="h-3 bg-gray-200 rounded w-1/3"></div>
                             </div>
                         @endif
@@ -35,7 +35,7 @@
                         {{-- Tags placeholder --}}
                         @if($i % 3 === 0)
                             <div class="flex items-center space-x-1 mt-2">
-                                <div class="w-4 h-4 bg-gray-200 rounded mr-2"></div>
+                                <div class="w-4 h-4 bg-gray-200 rounded me-2"></div>
                                 <div class="h-4 bg-gray-200 rounded w-12"></div>
                                 <div class="h-4 bg-gray-200 rounded w-16"></div>
                                 <div class="h-4 bg-gray-200 rounded w-14"></div>

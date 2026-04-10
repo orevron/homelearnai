@@ -1,4 +1,4 @@
-<div id="day-{{ $day }}" class="border-r border-gray-200 last:border-r-0 p-2 bg-gray-50 min-h-96 relative">
+<div id="day-{{ $day }}" class="border-e border-gray-200 last:border-e-0 p-2 bg-gray-50 min-h-96 relative">
     <!-- Add Time Block Button -->
     @if($selectedChild)
     <div class="mb-3">
@@ -19,7 +19,7 @@
     <!-- Time Blocks -->
     <div class="space-y-2">
         @forelse($timeBlocks as $timeBlock)
-            <div class="bg-white rounded-lg shadow-sm border-l-4 border-blue-500 p-3 hover:shadow-md transition-shadow group">
+            <div class="bg-white rounded-lg shadow-sm border-s-4 border-blue-500 p-3 hover:shadow-md transition-shadow group">
                 <!-- Time Block Content -->
                 <div class="flex justify-between items-start">
                     <div class="flex-1">
@@ -70,7 +70,7 @@
         <!-- Review Slots -->
         @if(isset($reviewSlots) && $reviewSlots->isNotEmpty())
             @foreach($reviewSlots as $reviewSlot)
-                <div class="bg-green-50 rounded-lg shadow-sm border-l-4 border-green-500 p-2 hover:shadow-md transition-shadow group">
+                <div class="bg-green-50 rounded-lg shadow-sm border-s-4 border-green-500 p-2 hover:shadow-md transition-shadow group">
                     <div class="flex justify-between items-start">
                         <div class="flex-1">
                             <div class="flex items-center space-x-2">

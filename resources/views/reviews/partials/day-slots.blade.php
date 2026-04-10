@@ -19,9 +19,9 @@
                 <div class="flex items-center space-x-3">
                     <div class="flex items-center">
                         @if($slot->is_active)
-                            <div class="w-2 h-2 bg-green-500 rounded-full mr-2"></div>
+                            <div class="w-2 h-2 bg-green-500 rounded-full me-2"></div>
                         @else
-                            <div class="w-2 h-2 bg-gray-300 rounded-full mr-2"></div>
+                            <div class="w-2 h-2 bg-gray-300 rounded-full me-2"></div>
                         @endif
                         <span class="text-sm font-medium text-gray-900" data-time-range="{{ $slot->getTimeRange() }}">{{ $slot->getTimeRange() }}</span>
                     </div>

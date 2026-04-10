@@ -8,9 +8,9 @@
     <!-- Header with fun styling -->
     <div class="mb-6 text-center">
         <h3 class="text-2xl font-bold text-gray-800 mb-2 flex items-center justify-center">
-            <span class="mr-3 text-3xl">📚</span>
+            <span class="me-3 text-3xl">📚</span>
             Learning Materials
-            <span class="ml-3 text-3xl">🎯</span>
+            <span class="ms-3 text-3xl">🎯</span>
         </h3>
         <p class="text-gray-600 text-lg">Explore these awesome resources to learn about {{ $topic->title }}!</p>
     </div>
@@ -31,7 +31,7 @@
                                  class="w-full h-full object-cover">
                             <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-20 group-hover:bg-opacity-10 transition-all">
                                 <div class="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center shadow-lg">
-                                    <svg class="w-8 h-8 text-white ml-1" fill="currentColor" viewBox="0 0 24 24">
+                                    <svg class="w-8 h-8 text-white ms-1" fill="currentColor" viewBox="0 0 24 24">
                                         <path d="M8 5v14l11-7z"/>
                                     </svg>
                                 </div>
@@ -72,7 +72,7 @@
                     <a href="{{ $video['url'] }}" target="_blank" rel="noopener noreferrer"
                        class="inline-flex items-center justify-center w-full py-3 px-6 bg-red-600 hover:bg-red-700 text-white font-semibold rounded-lg text-lg transition-all duration-200 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-red-300"
                        data-testid="watch-video-{{ $index }}">
-                        <svg class="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                        <svg class="w-6 h-6 me-2" fill="currentColor" viewBox="0 0 24 24">
                             <path d="M8 5v14l11-7z"/>
                         </svg>
                         Watch Video
@@ -80,7 +80,7 @@
                 </div>
 
                 <!-- Platform Badge -->
-                <div class="absolute top-4 right-4">
+                <div class="absolute top-4 end-4">
                     @if($video['type'] === 'youtube')
                         <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold bg-red-600 text-white shadow-lg">
                             YouTube
@@ -130,7 +130,7 @@
                     <a href="{{ $link['url'] }}" target="_blank" rel="noopener noreferrer"
                        class="inline-flex items-center justify-center w-full py-3 px-6 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg text-lg transition-all duration-200 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-blue-300"
                        data-testid="visit-link-{{ $index }}">
-                        <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <svg class="w-6 h-6 me-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
                         </svg>
                         Visit Website
@@ -205,7 +205,7 @@
                         <a href="{{ $file['url'] ?? Storage::url($file['path']) }}" target="_blank" rel="noopener noreferrer"
                            class="inline-flex items-center justify-center w-full py-3 px-6 bg-green-600 hover:bg-green-700 text-white font-semibold rounded-lg text-lg transition-all duration-200 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-green-300"
                            data-testid="view-file-{{ $index }}">
-                            <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg class="w-6 h-6 me-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
                             </svg>
@@ -214,7 +214,7 @@
                         <a href="{{ $file['url'] ?? Storage::url($file['path']) }}" download
                            class="inline-flex items-center justify-center w-full py-2 px-6 bg-white border-2 border-green-600 text-green-600 hover:bg-green-50 font-semibold rounded-lg text-base transition-all duration-200 focus:outline-none focus:ring-4 focus:ring-green-300"
                            data-testid="download-file-{{ $index }}">
-                            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg class="w-5 h-5 me-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
                             </svg>
                             Download
@@ -234,7 +234,7 @@
             <h3 class="text-xl font-bold text-gray-700 mb-2">No Learning Materials Yet</h3>
             <p class="text-gray-600 text-lg mb-6">Ask your parent to add some awesome videos, links, or files to help you learn!</p>
             <div class="inline-flex items-center px-6 py-3 bg-blue-100 text-blue-800 rounded-lg font-medium">
-                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg class="w-5 h-5 me-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
                 </svg>
                 Coming Soon!

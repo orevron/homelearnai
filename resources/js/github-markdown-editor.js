@@ -392,7 +392,7 @@ window.githubMarkdownEditor = () => ({
     showNotification(message, type = 'info') {
         // Simple notification - in production you might use a toast library
         const notification = document.createElement('div');
-        notification.className = `fixed top-4 right-4 p-4 rounded-lg z-50 transition-all duration-300 ${
+        notification.className = `fixed top-4 end-4 p-4 rounded-lg z-50 transition-all duration-300 ${
             type === 'error' ? 'bg-red-500 text-white' :
             type === 'success' ? 'bg-green-500 text-white' :
             'bg-blue-500 text-white'

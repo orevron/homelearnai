@@ -21,7 +21,7 @@
                 type="text" 
                 id="flashcard-search"
                 placeholder="Search flashcards by question, answer, or hint..."
-                class="w-full pl-10 pr-12 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                class="w-full ps-10 pe-12 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
                 hx-get="{{ route('flashcards.search', $unit->id) }}"
                 hx-trigger="keyup changed delay:300ms"
                 hx-target="#search-results"
@@ -32,14 +32,14 @@
             >
             
             {{-- Search Icon --}}
-            <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+            <div class="absolute inset-y-0 start-0 ps-3 flex items-center pointer-events-none">
                 <svg class="h-5 w-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
                 </svg>
             </div>
             
             {{-- Loading Indicator --}}
-            <div class="absolute inset-y-0 right-0 pr-3 flex items-center" id="search-loading" style="display: none;">
+            <div class="absolute inset-y-0 end-0 pe-3 flex items-center" id="search-loading" style="display: none;">
                 <x-loading-spinner size="small" color="gray" />
             </div>
             
@@ -47,7 +47,7 @@
             <button 
                 type="button" 
                 id="clear-search"
-                class="absolute inset-y-0 right-0 pr-3 flex items-center text-gray-400 hover:text-gray-600 transition-colors"
+                class="absolute inset-y-0 end-0 pe-3 flex items-center text-gray-400 hover:text-gray-600 transition-colors"
                 style="display: none;"
                 onclick="clearSearch()"
             >
@@ -177,11 +177,11 @@
             <div class="space-y-2">
                 <label class="flex items-center">
                     <input type="checkbox" name="has_images" value="true" class="rounded border-gray-300 text-blue-600 focus:ring-blue-500">
-                    <span class="ml-2 text-sm text-gray-700">Has Images</span>
+                    <span class="ms-2 text-sm text-gray-700">Has Images</span>
                 </label>
                 <label class="flex items-center">
                     <input type="checkbox" name="has_hints" value="true" class="rounded border-gray-300 text-blue-600 focus:ring-blue-500">
-                    <span class="ml-2 text-sm text-gray-700">Has Hints</span>
+                    <span class="ms-2 text-sm text-gray-700">Has Hints</span>
                 </label>
             </div>
         </form>

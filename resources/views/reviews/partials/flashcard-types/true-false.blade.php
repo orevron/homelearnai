@@ -64,14 +64,14 @@
             <button onclick="selectTrueFalse(0)" 
                     class="choice-btn true-btn flex items-center px-6 py-3 bg-white rounded border border-green-300 text-green-700 hover:bg-green-50 transition-colors"
                     data-choice-index="0">
-                <span class="text-xl mr-2">✓</span>
+                <span class="text-xl me-2">✓</span>
                 <span class="font-semibold">{{ __('TRUE') }}</span>
             </button>
             
             <button onclick="selectTrueFalse(1)" 
                     class="choice-btn false-btn flex items-center px-6 py-3 bg-white rounded border border-red-300 text-red-700 hover:bg-red-50 transition-colors"
                     data-choice-index="1">
-                <span class="text-xl mr-2">✗</span>
+                <span class="text-xl me-2">✗</span>
                 <span class="font-semibold">{{ __('FALSE') }}</span>
             </button>
         </div>
@@ -80,7 +80,7 @@
         <div class="feedback-content mt-4 border-t pt-4" style="display: none;">
             <div class="feedback-message p-4 rounded"></div>
             @if($flashcard->hint)
-                <div class="mt-3 p-3 bg-yellow-50 rounded border-l-4 border-yellow-400">
+                <div class="mt-3 p-3 bg-yellow-50 rounded border-s-4 border-yellow-400">
                     <div class="text-sm text-gray-700">
                         <strong>{{ __('Hint') }}:</strong> {{ $flashcard->hint }}
                     </div>

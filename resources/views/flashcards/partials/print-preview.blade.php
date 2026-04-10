@@ -74,8 +74,8 @@
                 $cardTypeCounts = $flashcards->countBy('card_type');
             @endphp
             @foreach($cardTypeCounts as $type => $count)
-                <span class="inline-block mr-4 mb-1">
-                    <span class="inline-block w-3 h-3 rounded mr-1" 
+                <span class="inline-block me-4 mb-1">
+                    <span class="inline-block w-3 h-3 rounded me-1" 
                           style="background-color: {{ 
                               match($type) {
                                   'basic' => '#3b82f6',

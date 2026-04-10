@@ -97,7 +97,7 @@
     @endif
         
         @if($session?->notes)
-            <div class="mt-4 p-3 bg-blue-50 rounded border-l-4 border-blue-200">
+            <div class="mt-4 p-3 bg-blue-50 rounded border-s-4 border-blue-200">
                 <h4 class="text-sm font-medium text-blue-900 mb-1">{{ __('session_notes') }}:</h4>
                 <p class="text-sm text-blue-800">{{ $session->notes }}</p>
             </div>
@@ -105,7 +105,7 @@
 
         {{-- Evidence from original session --}}
         @if($session?->hasEvidence())
-            <div class="mt-4 p-3 bg-green-50 rounded border-l-4 border-green-200">
+            <div class="mt-4 p-3 bg-green-50 rounded border-s-4 border-green-200">
                 <h4 class="text-sm font-medium text-green-900 mb-2">{{ __('learning_evidence') }}:</h4>
                 
                 @if($session->evidence_notes)
@@ -162,7 +162,7 @@
                     <p class="text-xl font-bold text-purple-800 mb-4">{{ __('Think about what you remember!') }}</p>
                     <button onclick="showAnswer(this)" 
                             class="show-answer-btn bg-gradient-to-r from-green-400 to-blue-500 text-white px-8 py-4 rounded-full text-xl font-bold shadow-xl hover:shadow-2xl transform hover:scale-110 transition-all duration-300">
-                        <span class="text-2xl mr-2">👀</span>
+                        <span class="text-2xl me-2">👀</span>
                         {{ __('Show Answer!') }}
                     </button>
                 </div>

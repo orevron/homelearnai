@@ -94,7 +94,7 @@
                             <input type="radio" name="locale" value="en" x-model="userLocale" @change="if(userLocale !== '{{ App::getLocale() }}') { saveLanguagePreference(true); }" class="sr-only">
                             <div class="flex items-center justify-between w-full">
                                 <div class="flex items-center">
-                                    <span class="text-2xl mr-4">🇬🇧</span>
+                                    <span class="text-2xl me-4">🇬🇧</span>
                                     <div>
                                         <p class="font-medium text-gray-900">English</p>
                                         <p class="text-sm text-gray-500">{{ __('Use HomeLearnAI in English') }}</p>
@@ -113,7 +113,7 @@
                             <input type="radio" name="locale" value="ru" x-model="userLocale" @change="if(userLocale !== '{{ App::getLocale() }}') { saveLanguagePreference(true); }" class="sr-only">
                             <div class="flex items-center justify-between w-full">
                                 <div class="flex items-center">
-                                    <span class="text-2xl mr-4">🇷🇺</span>
+                                    <span class="text-2xl me-4">🇷🇺</span>
                                     <div>
                                         <p class="font-medium text-gray-900">Русский</p>
                                         <p class="text-sm text-gray-500">{{ __('Use HomeLearnAI in Russian') }}</p>
@@ -130,7 +130,7 @@
 
                     <div class="mt-6 p-4 bg-blue-50 rounded-lg">
                         <p class="text-sm text-blue-800">
-                            <svg class="w-4 h-4 inline mr-2" fill="currentColor" viewBox="0 0 20 20">
+                            <svg class="w-4 h-4 inline me-2" fill="currentColor" viewBox="0 0 20 20">
                                 <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"/>
                             </svg>
                             {{ __('You can change your language preference anytime from your profile settings or using the language switcher in the navigation menu.') }}
@@ -242,7 +242,7 @@
                             type="button" 
                             class="inline-flex items-center px-4 py-2 border border-gray-300 shadow-sm text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
                             data-testid="add-another-child">
-                            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg class="w-4 h-4 me-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/>
                             </svg>
                             {{ __('Add Another Child') }}
@@ -255,7 +255,7 @@
                     <!-- Form Error Messages -->
                     <div x-show="formError" class="mt-4 p-3 bg-red-100 border border-red-300 rounded-md" data-testid="form-error">
                         <div class="flex">
-                            <svg class="w-5 h-5 text-red-400 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                            <svg class="w-5 h-5 text-red-400 me-2" fill="currentColor" viewBox="0 0 20 20">
                                 <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/>
                             </svg>
                             <div class="text-sm text-red-600" x-text="formError"></div>
@@ -265,7 +265,7 @@
                     <!-- Form Success Messages -->
                     <div x-show="formSuccess" class="mt-4 p-3 bg-green-100 border border-green-300 rounded-md" data-testid="form-success">
                         <div class="flex">
-                            <svg class="w-5 h-5 text-green-400 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                            <svg class="w-5 h-5 text-green-400 me-2" fill="currentColor" viewBox="0 0 20 20">
                                 <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
                             </svg>
                             <div class="text-sm text-green-600" x-text="formSuccess"></div>
@@ -330,7 +330,7 @@
                                                            :checked="isSubjectSelected(child.id, subject)"
                                                            @change="toggleSubject(child.id, subject)"
                                                            class="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500">
-                                                    <span class="ml-3 text-sm text-gray-700" x-text="subject"></span>
+                                                    <span class="ms-3 text-sm text-gray-700" x-text="subject"></span>
                                                 </label>
                                             </template>
                                         </div>
@@ -363,7 +363,7 @@
                                                     @click="addCustomSubject(child.id)"
                                                     x-show="getCustomSubjects(child.id).length < 3"
                                                     class="text-sm text-blue-600 hover:text-blue-700 font-medium inline-flex items-center">
-                                                <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <svg class="w-4 h-4 me-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/>
                                                 </svg>
                                                 {{ __('Add Custom Subject') }}
@@ -378,7 +378,7 @@
                                                    :name="'subjects[' + child.id + '][skip]'"
                                                    x-model="subjectsData[child.id].skip"
                                                    class="w-4 h-4 text-yellow-600 border-gray-300 rounded focus:ring-yellow-500">
-                                            <span class="ml-2 text-sm text-gray-700">{{ __('Skip subjects for now (can add later)') }}</span>
+                                            <span class="ms-2 text-sm text-gray-700">{{ __('Skip subjects for now (can add later)') }}</span>
                                         </label>
                                     </div>
                                 </div>
@@ -394,7 +394,7 @@
                     <!-- Form Messages -->
                     <div x-show="subjectsFormError" class="mt-6 p-3 bg-red-100 border border-red-300 rounded-md" data-testid="subjects-form-error">
                         <div class="flex">
-                            <svg class="w-5 h-5 text-red-400 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                            <svg class="w-5 h-5 text-red-400 me-2" fill="currentColor" viewBox="0 0 20 20">
                                 <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/>
                             </svg>
                             <div class="text-sm text-red-600" x-text="subjectsFormError"></div>
@@ -403,7 +403,7 @@
 
                     <div x-show="subjectsFormSuccess" class="mt-6 p-3 bg-green-100 border border-green-300 rounded-md" data-testid="subjects-form-success">
                         <div class="flex">
-                            <svg class="w-5 h-5 text-green-400 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                            <svg class="w-5 h-5 text-green-400 me-2" fill="currentColor" viewBox="0 0 20 20">
                                 <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
                             </svg>
                             <div class="text-sm text-green-600" x-text="subjectsFormSuccess"></div>
@@ -435,7 +435,7 @@
                     <!-- Children Summary -->
                     <div class="bg-white border border-gray-200 rounded-lg p-6">
                         <div class="flex items-center mb-4">
-                            <div class="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center mr-3">
+                            <div class="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center me-3">
                                 <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
                                 </svg>
@@ -450,7 +450,7 @@
                             <template x-for="child in savedChildren" :key="child.id">
                                 <div class="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
                                     <div class="flex items-center">
-                                        <div class="w-8 h-8 bg-blue-200 rounded-full flex items-center justify-center mr-3">
+                                        <div class="w-8 h-8 bg-blue-200 rounded-full flex items-center justify-center me-3">
                                             <span class="text-sm font-medium text-blue-800" x-text="child.name.charAt(0).toUpperCase()"></span>
                                         </div>
                                         <div>
@@ -462,7 +462,7 @@
                                             </p>
                                         </div>
                                     </div>
-                                    <div class="text-right">
+                                    <div class="text-end">
                                         <p class="text-sm font-medium text-gray-700" x-text="getChildSubjectCount(child.id) + ' {{ __('subjects') }}'"></p>
                                     </div>
                                 </div>
@@ -473,7 +473,7 @@
                     <!-- Subjects Summary -->
                     <div class="bg-white border border-gray-200 rounded-lg p-6">
                         <div class="flex items-center mb-4">
-                            <div class="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center mr-3">
+                            <div class="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center me-3">
                                 <svg class="w-5 h-5 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
                                 </svg>
@@ -506,7 +506,7 @@
                     <!-- Next Steps -->  
                     <div class="bg-blue-50 border border-blue-200 rounded-lg p-6">
                         <div class="flex items-center mb-4">
-                            <div class="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center mr-3">
+                            <div class="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center me-3">
                                 <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
                                 </svg>
@@ -517,13 +517,13 @@
                         <div class="grid md:grid-cols-2 gap-4">
                             <div class="space-y-3">
                                 <div class="flex items-start">
-                                    <svg class="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <svg class="w-5 h-5 text-green-500 me-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                                         <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
                                     </svg>
                                     <p class="text-sm text-gray-700">{{ __('Add units and topics to each subject') }}</p>
                                 </div>
                                 <div class="flex items-start">
-                                    <svg class="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <svg class="w-5 h-5 text-green-500 me-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                                         <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
                                     </svg>
                                     <p class="text-sm text-gray-700">{{ __('Set up your weekly schedule in the Planning Board') }}</p>
@@ -531,13 +531,13 @@
                             </div>
                             <div class="space-y-3">
                                 <div class="flex items-start">
-                                    <svg class="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <svg class="w-5 h-5 text-green-500 me-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                                         <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
                                     </svg>
                                     <p class="text-sm text-gray-700">{{ __('Review settings for each child in Children Management') }}</p>
                                 </div>
                                 <div class="flex items-start">
-                                    <svg class="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <svg class="w-5 h-5 text-green-500 me-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                                         <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
                                     </svg>
                                     <p class="text-sm text-gray-700">{{ __('Start planning your first week of learning!') }}</p>
@@ -1125,7 +1125,7 @@ function onboardingWizard() {
                 if (response.ok && data.success) {
                     // Show brief success message
                     const successMessage = document.createElement('div');
-                    successMessage.className = 'fixed top-4 right-4 bg-green-100 border border-green-400 text-green-700 px-6 py-3 rounded-lg shadow-lg z-50';
+                    successMessage.className = 'fixed top-4 end-4 bg-green-100 border border-green-400 text-green-700 px-6 py-3 rounded-lg shadow-lg z-50';
                     successMessage.innerHTML = '{{ __("🎉 Setup complete! Welcome to your homeschool hub!") }}';
                     document.body.appendChild(successMessage);
 

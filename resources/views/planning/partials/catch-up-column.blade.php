@@ -2,9 +2,9 @@
 <div id="catch-up-column" class="kanban-column bg-orange-50 rounded-lg p-4" data-status="catch-up">
   <div class="flex items-center justify-between mb-4">
     <h3 class="font-semibold text-gray-900 flex items-center">
-      <div class="w-3 h-3 bg-orange-400 rounded-full mr-2"></div>
+      <div class="w-3 h-3 bg-orange-400 rounded-full me-2"></div>
       {{ __('catchup_lane') }}
-      <span class="ml-2 bg-orange-200 text-orange-700 px-2 py-1 text-xs rounded-full">
+      <span class="ms-2 bg-orange-200 text-orange-700 px-2 py-1 text-xs rounded-full">
         {{ $catchUpSessions->count() }}
       </span>
     </h3>
@@ -49,21 +49,21 @@
       
       @if($highPriority > 0)
         <div class="flex items-center">
-          <span class="w-2 h-2 bg-red-400 rounded-full mr-2"></span>
+          <span class="w-2 h-2 bg-red-400 rounded-full me-2"></span>
           {{ $highPriority }} Critical
         </div>
       @endif
       
       @if($mediumPriority > 0)
         <div class="flex items-center">
-          <span class="w-2 h-2 bg-orange-400 rounded-full mr-2"></span>
+          <span class="w-2 h-2 bg-orange-400 rounded-full me-2"></span>
           {{ $mediumPriority }} High
         </div>
       @endif
       
       @if($lowPriority > 0)
         <div class="flex items-center">
-          <span class="w-2 h-2 bg-yellow-400 rounded-full mr-2"></span>
+          <span class="w-2 h-2 bg-yellow-400 rounded-full me-2"></span>
           {{ $lowPriority }} Medium/Low
         </div>
       @endif

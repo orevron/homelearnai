@@ -4,9 +4,9 @@
   <div class="kanban-column bg-gray-50 rounded-lg p-4" data-status="backlog">
     <div class="flex items-center justify-between mb-4">
       <h3 class="font-semibold text-gray-900 flex items-center">
-        <div class="w-3 h-3 bg-gray-400 rounded-full mr-2"></div>
+        <div class="w-3 h-3 bg-gray-400 rounded-full me-2"></div>
         {{ __('backlog') }}
-        <span class="ml-2 bg-gray-200 text-gray-700 px-2 py-1 text-xs rounded-full">
+        <span class="ms-2 bg-gray-200 text-gray-700 px-2 py-1 text-xs rounded-full">
           {{ $sessionsByStatus['backlog']->count() }}
         </span>
       </h3>
@@ -37,9 +37,9 @@
   <div class="kanban-column bg-blue-50 rounded-lg p-4" data-status="planned">
     <div class="flex items-center justify-between mb-4">
       <h3 class="font-semibold text-gray-900 flex items-center">
-        <div class="w-3 h-3 bg-blue-400 rounded-full mr-2"></div>
+        <div class="w-3 h-3 bg-blue-400 rounded-full me-2"></div>
         {{ __('planned') }}
-        <span class="ml-2 bg-blue-200 text-blue-700 px-2 py-1 text-xs rounded-full">
+        <span class="ms-2 bg-blue-200 text-blue-700 px-2 py-1 text-xs rounded-full">
           {{ $sessionsByStatus['planned']->count() }}
         </span>
       </h3>
@@ -65,9 +65,9 @@
   <div class="kanban-column scheduled bg-green-50 rounded-lg p-4" data-status="scheduled">
     <div class="flex items-center justify-between mb-4">
       <h3 class="font-semibold text-gray-900 flex items-center">
-        <div class="w-3 h-3 bg-green-400 rounded-full mr-2"></div>
+        <div class="w-3 h-3 bg-green-400 rounded-full me-2"></div>
         {{ __('scheduled') }}
-        <span class="ml-2 bg-green-200 text-green-700 px-2 py-1 text-xs rounded-full">
+        <span class="ms-2 bg-green-200 text-green-700 px-2 py-1 text-xs rounded-full">
           {{ $sessionsByStatus['scheduled']->count() }}
         </span>
       </h3>
@@ -93,9 +93,9 @@
   <div class="kanban-column bg-purple-50 rounded-lg p-4" data-status="done">
     <div class="flex items-center justify-between mb-4">
       <h3 class="font-semibold text-gray-900 flex items-center">
-        <div class="w-3 h-3 bg-purple-400 rounded-full mr-2"></div>
+        <div class="w-3 h-3 bg-purple-400 rounded-full me-2"></div>
         {{ __('done') }}
-        <span class="ml-2 bg-purple-200 text-purple-700 px-2 py-1 text-xs rounded-full">
+        <span class="ms-2 bg-purple-200 text-purple-700 px-2 py-1 text-xs rounded-full">
           {{ $sessionsByStatus['done']->count() }}
         </span>
       </h3>

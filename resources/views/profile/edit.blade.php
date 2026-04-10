@@ -42,9 +42,9 @@
                     <nav class="p-4">
                         <button @click="activeTab = 'general'"
                                 data-testid="profile-tab-general"
-                                :class="activeTab === 'general' ? 'bg-blue-50 text-blue-700 border-l-4 border-blue-700' : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900 border-l-4 border-transparent'"
+                                :class="activeTab === 'general' ? 'bg-blue-50 text-blue-700 border-s-4 border-blue-700' : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900 border-s-4 border-transparent'"
                                 class="w-full flex items-center px-3 py-2 text-sm font-medium transition-all">
-                            <svg class="mr-3 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg class="me-3 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
                             </svg>
                             {{ __('General') }}
@@ -52,9 +52,9 @@
                         
                         <button @click="activeTab = 'preferences'"
                                 data-testid="profile-tab-preferences"
-                                :class="activeTab === 'preferences' ? 'bg-blue-50 text-blue-700 border-l-4 border-blue-700' : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900 border-l-4 border-transparent'"
+                                :class="activeTab === 'preferences' ? 'bg-blue-50 text-blue-700 border-s-4 border-blue-700' : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900 border-s-4 border-transparent'"
                                 class="w-full flex items-center px-3 py-2 text-sm font-medium transition-all mt-1">
-                            <svg class="mr-3 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg class="me-3 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
                             </svg>
@@ -63,9 +63,9 @@
                         
                         <button @click="activeTab = 'security'"
                                 data-testid="profile-tab-security"
-                                :class="activeTab === 'security' ? 'bg-blue-50 text-blue-700 border-l-4 border-blue-700' : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900 border-l-4 border-transparent'"
+                                :class="activeTab === 'security' ? 'bg-blue-50 text-blue-700 border-s-4 border-blue-700' : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900 border-s-4 border-transparent'"
                                 class="w-full flex items-center px-3 py-2 text-sm font-medium transition-all mt-1">
-                            <svg class="mr-3 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg class="me-3 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
                             </svg>
                             {{ __('Security') }}
@@ -137,13 +137,13 @@
                                            data-testid="locale-option-en"
                                            @change="updateLocale('en')" class="sr-only">
                                     <div class="flex items-center">
-                                        <span class="text-2xl mr-3">🇬🇧</span>
+                                        <span class="text-2xl me-3">🇬🇧</span>
                                         <div>
                                             <p class="font-medium text-gray-900">English</p>
                                             <p class="text-xs text-gray-500">Interface language</p>
                                         </div>
                                     </div>
-                                    <div x-show="selectedLocale === 'en'" class="ml-auto text-blue-500">
+                                    <div x-show="selectedLocale === 'en'" class="ms-auto text-blue-500">
                                         <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
                                             <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
                                         </svg>
@@ -156,13 +156,13 @@
                                            data-testid="locale-option-ru"
                                            @change="updateLocale('ru')" class="sr-only">
                                     <div class="flex items-center">
-                                        <span class="text-2xl mr-3">🇷🇺</span>
+                                        <span class="text-2xl me-3">🇷🇺</span>
                                         <div>
                                             <p class="font-medium text-gray-900">Русский</p>
                                             <p class="text-xs text-gray-500">Язык интерфейса</p>
                                         </div>
                                     </div>
-                                    <div x-show="selectedLocale === 'ru'" class="ml-auto text-blue-500">
+                                    <div x-show="selectedLocale === 'ru'" class="ms-auto text-blue-500">
                                         <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
                                             <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
                                         </svg>
@@ -339,14 +339,14 @@
                                     <input type="checkbox" name="email_notifications" value="1" 
                                            {{ $user->email_notifications ? 'checked' : '' }}
                                            class="rounded border-gray-300 text-blue-600 shadow-sm focus:border-blue-500 focus:ring-blue-500">
-                                    <span class="ml-2 text-sm text-gray-700">{{ __('Email notifications') }}</span>
+                                    <span class="ms-2 text-sm text-gray-700">{{ __('Email notifications') }}</span>
                                 </label>
                                 
                                 <label class="flex items-center">
                                     <input type="checkbox" name="review_reminders" value="1" 
                                            {{ $user->review_reminders ? 'checked' : '' }}
                                            class="rounded border-gray-300 text-blue-600 shadow-sm focus:border-blue-500 focus:ring-blue-500">
-                                    <span class="ml-2 text-sm text-gray-700">{{ __('Review reminders') }}</span>
+                                    <span class="ms-2 text-sm text-gray-700">{{ __('Review reminders') }}</span>
                                 </label>
                             </div>
                             

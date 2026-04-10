@@ -71,7 +71,7 @@
                                            :checked="selectedSubjects.includes(subject)"
                                            @change="toggleSubject(subject)"
                                            class="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500">
-                                    <span class="ml-3 text-sm text-gray-700" x-text="subject"></span>
+                                    <span class="ms-3 text-sm text-gray-700" x-text="subject"></span>
                                 </label>
                             </template>
                         </div>

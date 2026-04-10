@@ -29,7 +29,7 @@
                             @foreach($layouts as $key => $label)
                                 <label class="flex items-center">
                                     <input type="radio" name="layout" value="{{ $key }}" 
-                                           class="mr-2 text-blue-600 focus:ring-blue-500" 
+                                           class="me-2 text-blue-600 focus:ring-blue-500" 
                                            {{ $key === 'index' ? 'checked' : '' }}
                                            onchange="updatePreview()">
                                     <span class="text-sm text-gray-700">{{ $label }}</span>
@@ -83,12 +83,12 @@
                         <div class="space-y-2">
                             <label class="flex items-center">
                                 <input type="checkbox" name="include_answers" value="1" checked 
-                                       class="mr-2 text-blue-600 focus:ring-blue-500" onchange="updatePreview()">
+                                       class="me-2 text-blue-600 focus:ring-blue-500" onchange="updatePreview()">
                                 <span class="text-sm text-gray-700">Include answers</span>
                             </label>
                             <label class="flex items-center">
                                 <input type="checkbox" name="include_hints" value="1" checked 
-                                       class="mr-2 text-blue-600 focus:ring-blue-500" onchange="updatePreview()">
+                                       class="me-2 text-blue-600 focus:ring-blue-500" onchange="updatePreview()">
                                 <span class="text-sm text-gray-700">Include hints</span>
                             </label>
                         </div>
@@ -150,7 +150,7 @@
                 <button type="button" 
                         onclick="downloadPDF()"
                         class="px-4 py-2 text-sm font-medium text-white bg-blue-600 border border-transparent rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
-                    <svg class="w-4 h-4 mr-2 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg class="w-4 h-4 me-2 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
                     </svg>
                     Download PDF
@@ -202,7 +202,7 @@ function downloadPDF() {
     // Show loading state on button
     const downloadButton = event.target;
     const originalText = downloadButton.innerHTML;
-    downloadButton.innerHTML = '<div class="animate-spin w-4 h-4 border-2 border-white border-t-transparent rounded-full inline mr-2"></div>Generating PDF...';
+    downloadButton.innerHTML = '<div class="animate-spin w-4 h-4 border-2 border-white border-t-transparent rounded-full inline me-2"></div>Generating PDF...';
     downloadButton.disabled = true;
 
     fetch('{{ route('flashcards.print.download', $unit->id) }}', {

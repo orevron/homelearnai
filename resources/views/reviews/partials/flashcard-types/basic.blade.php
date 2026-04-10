@@ -53,9 +53,9 @@
                 @if($flashcard->answer_image_url)
                     <img src="{{ $flashcard->answer_image_url }}" alt="Answer image" class="mb-4 max-w-full h-auto rounded">
                 @endif
-                <div class="answer-text p-4 bg-green-50 rounded border-l-4 border-green-400">{{ $flashcard->answer }}</div>
+                <div class="answer-text p-4 bg-green-50 rounded border-s-4 border-green-400">{{ $flashcard->answer }}</div>
                 @if($flashcard->hint)
-                    <div class="mt-3 p-3 bg-yellow-50 rounded border-l-4 border-yellow-400">
+                    <div class="mt-3 p-3 bg-yellow-50 rounded border-s-4 border-yellow-400">
                         <div class="text-sm text-gray-700">
                             <strong>{{ __('Hint') }}:</strong> {{ $flashcard->hint }}
                         </div>

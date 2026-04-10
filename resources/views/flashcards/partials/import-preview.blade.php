@@ -8,7 +8,7 @@
             hx-target="#import-content"
             hx-swap="innerHTML"
             class="text-gray-500 hover:text-gray-700 flex items-center">
-            <svg class="w-5 h-5 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg class="w-5 h-5 me-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
             </svg>
             Back to Import
@@ -59,7 +59,7 @@
     @if(!empty($validationErrors))
         <div class="bg-red-50 border border-red-200 rounded-lg p-4">
             <div class="flex items-center mb-2">
-                <svg class="w-5 h-5 text-red-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg class="w-5 h-5 text-red-500 me-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
                 </svg>
                 <h4 class="text-lg font-semibold text-red-900">Validation Errors</h4>
@@ -76,7 +76,7 @@
     @if(!empty($parseErrors))
         <div class="bg-yellow-50 border border-yellow-200 rounded-lg p-4">
             <div class="flex items-center mb-2">
-                <svg class="w-5 h-5 text-yellow-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg class="w-5 h-5 text-yellow-500 me-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 19c-.77.833.192 2.5 1.732 2.5z"/>
                 </svg>
                 <h4 class="text-lg font-semibold text-yellow-900">Parse Warnings</h4>
@@ -102,11 +102,11 @@
                     <table class="min-w-full divide-y divide-gray-200">
                         <thead class="bg-gray-50">
                             <tr>
-                                <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Type</th>
-                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Question</th>
-                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Answer</th>
-                                <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Hint</th>
-                                <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Tags</th>
+                                <th class="px-4 py-3 text-start text-xs font-medium text-gray-500 uppercase tracking-wider">Type</th>
+                                <th class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase tracking-wider">Question</th>
+                                <th class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase tracking-wider">Answer</th>
+                                <th class="px-4 py-3 text-start text-xs font-medium text-gray-500 uppercase tracking-wider">Hint</th>
+                                <th class="px-4 py-3 text-start text-xs font-medium text-gray-500 uppercase tracking-wider">Tags</th>
                             </tr>
                         </thead>
                         <tbody class="bg-white divide-y divide-gray-200">

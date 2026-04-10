@@ -49,7 +49,7 @@
                 <input type="hidden" name="topic_id" value="{{ $topic->id }}">
                 <div class="bg-blue-50 border border-blue-200 rounded-lg p-3 mb-4">
                     <div class="flex items-center">
-                        <svg class="w-4 h-4 text-blue-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <svg class="w-4 h-4 text-blue-600 me-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
                         </svg>
                         <span class="text-sm text-blue-800">
@@ -61,7 +61,7 @@
                 <!-- Error state: No topic provided -->
                 <div class="bg-red-50 border border-red-200 rounded-lg p-3 mb-4">
                     <div class="flex items-center">
-                        <svg class="w-4 h-4 text-red-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <svg class="w-4 h-4 text-red-600 me-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
                         </svg>
                         <span class="text-sm text-red-800">
@@ -163,7 +163,7 @@
                     <div class="flex space-x-2">
                         <button type="button" onclick="addChoice()" 
                                 class="inline-flex items-center px-3 py-2 border border-gray-300 shadow-sm text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50">
-                            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg class="w-4 h-4 me-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/>
                             </svg>
                             Add Choice
@@ -181,11 +181,11 @@
                 <div class="space-y-2">
                     <label class="inline-flex items-center">
                         <input type="radio" name="true_false_answer" value="true" class="text-blue-600 focus:ring-blue-500">
-                        <span class="ml-2">True</span>
+                        <span class="ms-2">True</span>
                     </label>
                     <label class="inline-flex items-center">
                         <input type="radio" name="true_false_answer" value="false" class="text-blue-600 focus:ring-blue-500">
-                        <span class="ml-2">False</span>
+                        <span class="ms-2">False</span>
                     </label>
                 </div>
             </div>

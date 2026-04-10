@@ -5,7 +5,7 @@
 @endphp
 
 <!-- Catch-Up Session Card -->
-<div class="bg-white border-l-4 border-{{ $catchUpSession->priority <= 2 ? 'red' : ($catchUpSession->priority == 3 ? 'orange' : 'yellow') }}-400 rounded-lg p-3 shadow-sm hover:shadow-md transition-shadow catch-up-card catch-up-session" 
+<div class="bg-white border-s-4 border-{{ $catchUpSession->priority <= 2 ? 'red' : ($catchUpSession->priority == 3 ? 'orange' : 'yellow') }}-400 rounded-lg p-3 shadow-sm hover:shadow-md transition-shadow catch-up-card catch-up-session" 
      data-catch-up-id="{{ $catchUpSession->id }}"
      data-priority="{{ $catchUpSession->priority }}">
   
@@ -38,7 +38,7 @@
       </button>
       
       <div x-show="open" @click.away="open = false" 
-           class="absolute right-0 mt-1 w-48 bg-white rounded-md shadow-lg z-10 border">
+           class="absolute end-0 mt-1 w-48 bg-white rounded-md shadow-lg z-10 border">
         <div class="py-1">
           <!-- Change priority -->
           <div class="px-4 py-2 text-xs text-gray-500 font-medium">Change Priority</div>
@@ -49,7 +49,7 @@
               hx-vals='{"priority": {{ $priority }}}'
               hx-target="#catch-up-column"
               hx-swap="outerHTML"
-              class="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+              class="block w-full text-start px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
             >
               {{ $label }}
             </button>
@@ -64,7 +64,7 @@
             hx-confirm="Are you sure you want to cancel this catch-up session?"
             hx-target=".catch-up-card[data-catch-up-id='{{ $catchUpSession->id }}']"
             hx-swap="outerHTML swap:1s"
-            class="block w-full text-left px-4 py-2 text-sm text-red-600 hover:bg-red-50"
+            class="block w-full text-start px-4 py-2 text-sm text-red-600 hover:bg-red-50"
           >
             Cancel Catch-Up
           </button>
@@ -82,7 +82,7 @@
     <div class="flex items-center text-xs text-gray-500 mt-1 space-x-2">
       @if($subject)
         <span class="inline-flex items-center">
-          <div class="w-2 h-2 rounded-full mr-1" style="background-color: {{ $subject->color }}"></div>
+          <div class="w-2 h-2 rounded-full me-1" style="background-color: {{ $subject->color }}"></div>
           {{ $subject->name }}
         </span>
       @endif
@@ -98,7 +98,7 @@
     <!-- Duration and missed date -->
     <div class="flex items-center justify-between">
       <span class="flex items-center">
-        <svg class="w-3 h-3 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg class="w-3 h-3 me-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
         </svg>
         {{ $catchUpSession->getFormattedDuration() }}
@@ -119,7 +119,7 @@
     <!-- Status if reassigned -->
     @if($catchUpSession->status === 'reassigned')
       <div class="flex items-center text-blue-600">
-        <svg class="w-3 h-3 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg class="w-3 h-3 me-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
         </svg>
         Reassigned to new session
@@ -136,7 +136,7 @@
       hx-swap="innerHTML"
       class="w-full text-xs bg-orange-100 text-orange-700 py-2 px-3 rounded hover:bg-orange-200 transition-colors flex items-center justify-center"
     >
-      <svg class="w-3 h-3 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <svg class="w-3 h-3 me-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
       </svg>
       Find Time Slots

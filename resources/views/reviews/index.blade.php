@@ -105,8 +105,8 @@ function showWeeklyStats() {
     document.querySelector('.monthly-stats').style.display = 'none';
     
     // Update button styles
-    document.getElementById('weekly-toggle').className = 'px-4 py-2 text-sm font-medium text-white bg-blue-600 border border-blue-600 rounded-l-lg hover:bg-blue-700';
-    document.getElementById('monthly-toggle').className = 'px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-r-lg hover:bg-gray-100';
+    document.getElementById('weekly-toggle').className = 'px-4 py-2 text-sm font-medium text-white bg-blue-600 border border-blue-600 rounded-s-lg hover:bg-blue-700';
+    document.getElementById('monthly-toggle').className = 'px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-e-lg hover:bg-gray-100';
 }
 
 function showMonthlyStats() {
@@ -114,8 +114,8 @@ function showMonthlyStats() {
     document.querySelector('.monthly-stats').style.display = 'block';
     
     // Update button styles
-    document.getElementById('weekly-toggle').className = 'px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-l-lg hover:bg-gray-100';
-    document.getElementById('monthly-toggle').className = 'px-4 py-2 text-sm font-medium text-white bg-blue-600 border border-blue-600 rounded-r-lg hover:bg-blue-700';
+    document.getElementById('weekly-toggle').className = 'px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-s-lg hover:bg-gray-100';
+    document.getElementById('monthly-toggle').className = 'px-4 py-2 text-sm font-medium text-white bg-blue-600 border border-blue-600 rounded-e-lg hover:bg-blue-700';
 }
 </script>
 @endpush

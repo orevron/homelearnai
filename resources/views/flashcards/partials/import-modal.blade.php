@@ -21,11 +21,11 @@
                 <label class="text-sm font-medium text-gray-700 mb-3 block">Import Method</label>
                 <div class="flex space-x-4">
                     <label class="flex items-center">
-                        <input type="radio" name="import_method" value="file" class="mr-2" checked>
+                        <input type="radio" name="import_method" value="file" class="me-2" checked>
                         <span class="text-sm">Upload File</span>
                     </label>
                     <label class="flex items-center">
-                        <input type="radio" name="import_method" value="paste" class="mr-2">
+                        <input type="radio" name="import_method" value="paste" class="me-2">
                         <span class="text-sm">Copy & Paste</span>
                     </label>
                 </div>

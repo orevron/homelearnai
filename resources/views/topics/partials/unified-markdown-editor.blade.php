@@ -39,7 +39,7 @@
 
         <!-- Preview Panel -->
         <div x-show="showPreview"
-             class="flex-1 border-l border-gray-200 bg-white overflow-auto">
+             class="flex-1 border-s border-gray-200 bg-white overflow-auto">
             <div class="p-4 prose prose-sm max-w-none" x-html="previewHtml">
                 <div class="text-gray-500 italic text-center py-8">
                     <p>{{ __('Preview will appear here...') }}</p>
@@ -138,18 +138,18 @@ function highlightMarkdownEditor() {
                 // Links
                 .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank" class="text-blue-600 underline hover:text-blue-800">$1</a>')
                 // Unordered lists
-                .replace(/^[\s]*[-*+]\s+(.+)$/gm, '<li class="ml-4">• $1</li>')
+                .replace(/^[\s]*[-*+]\s+(.+)$/gm, '<li class="ms-4">• $1</li>')
                 // Ordered lists
-                .replace(/^[\s]*\d+\.\s+(.+)$/gm, '<li class="ml-4">$1</li>')
+                .replace(/^[\s]*\d+\.\s+(.+)$/gm, '<li class="ms-4">$1</li>')
                 // Blockquotes
-                .replace(/^>\s+(.+)$/gm, '<blockquote class="border-l-4 border-gray-300 pl-4 italic text-gray-600 my-2">$1</blockquote>')
+                .replace(/^>\s+(.+)$/gm, '<blockquote class="border-s-4 border-gray-300 ps-4 italic text-gray-600 my-2">$1</blockquote>')
                 // Paragraphs (double line breaks)
                 .replace(/\n\n/g, '</p><p class="mb-3">')
                 // Single line breaks
                 .replace(/\n/g, '<br>');
 
             // Wrap consecutive list items
-            html = html.replace(/(<li class="ml-4">.*?<\/li>\s*)+/g, (match) => {
+            html = html.replace(/(<li class="ms-4">.*?<\/li>\s*)+/g, (match) => {
                 return '<ul class="list-none mb-3 space-y-1">' + match + '</ul>';
             });
 

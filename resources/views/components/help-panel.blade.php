@@ -22,7 +22,7 @@
     <div class="absolute inset-0 bg-gray-500 bg-opacity-75" @click="open = false"></div>
     
     <!-- Panel -->
-    <div class="absolute right-0 top-0 h-full w-full max-w-2xl bg-white shadow-xl transform transition-transform duration-300 ease-in-out"
+    <div class="absolute end-0 top-0 h-full w-full max-w-2xl bg-white shadow-xl transform transition-transform duration-300 ease-in-out"
          :class="open ? 'translate-x-0' : 'translate-x-full'"
          @click.stop>
         
@@ -53,9 +53,9 @@
                         x-model="searchQuery"
                         @input.debounce.300ms="searchHelp()"
                         placeholder="Search help articles, videos, and guides..."
-                        class="w-full px-4 py-2 pl-10 text-gray-900 bg-white rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-300"
+                        class="w-full px-4 py-2 ps-10 text-gray-900 bg-white rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-300"
                     >
-                    <svg class="absolute left-3 top-2.5 w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg class="absolute start-3 top-2.5 w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
                     </svg>
                 </div>
@@ -151,7 +151,7 @@
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <a href="/docs/user/parent-guide.md" target="_blank" 
                            class="flex items-center p-3 bg-white rounded border hover:bg-gray-50">
-                            <svg class="w-5 h-5 text-blue-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg class="w-5 h-5 text-blue-500 me-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
                             </svg>
                             <div>
@@ -161,7 +161,7 @@
                         </a>
                         <a href="/docs/user/kids-guide.md" target="_blank"
                            class="flex items-center p-3 bg-white rounded border hover:bg-gray-50">
-                            <svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg class="w-5 h-5 text-green-500 me-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h1.01M15 10h1.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
                             </svg>
                             <div>
@@ -236,7 +236,7 @@
                 <div class="space-y-4">
                     <div class="bg-yellow-50 border border-yellow-200 rounded-lg p-4">
                         <div class="flex items-start">
-                            <svg class="flex-shrink-0 w-5 h-5 text-yellow-600 mt-0.5 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                            <svg class="flex-shrink-0 w-5 h-5 text-yellow-600 mt-0.5 me-3" fill="currentColor" viewBox="0 0 20 20">
                                 <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
                             </svg>
                             <div>
@@ -248,7 +248,7 @@
                     
                     <div class="bg-blue-50 border border-blue-200 rounded-lg p-4">
                         <div class="flex items-start">
-                            <svg class="flex-shrink-0 w-5 h-5 text-blue-600 mt-0.5 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                            <svg class="flex-shrink-0 w-5 h-5 text-blue-600 mt-0.5 me-3" fill="currentColor" viewBox="0 0 20 20">
                                 <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
                             </svg>
                             <div>
@@ -260,7 +260,7 @@
                     
                     <div class="bg-green-50 border border-green-200 rounded-lg p-4">
                         <div class="flex items-start">
-                            <svg class="flex-shrink-0 w-5 h-5 text-green-600 mt-0.5 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                            <svg class="flex-shrink-0 w-5 h-5 text-green-600 mt-0.5 me-3" fill="currentColor" viewBox="0 0 20 20">
                                 <path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd"/>
                             </svg>
                             <div>
@@ -281,7 +281,7 @@
                 <div class="space-y-4" x-data="{ openFaq: null }">
                     <div class="border border-gray-200 rounded-lg">
                         <button @click="openFaq = openFaq === 1 ? null : 1" 
-                                class="w-full text-left px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 rounded-lg">
+                                class="w-full text-start px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 rounded-lg">
                             <div class="flex items-center justify-between">
                                 <span class="font-medium text-gray-900">How do I import cards from Quizlet?</span>
                                 <svg class="w-5 h-5 text-gray-500 transform transition-transform" 
@@ -298,7 +298,7 @@
                     
                     <div class="border border-gray-200 rounded-lg">
                         <button @click="openFaq = openFaq === 2 ? null : 2" 
-                                class="w-full text-left px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 rounded-lg">
+                                class="w-full text-start px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 rounded-lg">
                             <div class="flex items-center justify-between">
                                 <span class="font-medium text-gray-900">Can kids create their own flashcards?</span>
                                 <svg class="w-5 h-5 text-gray-500 transform transition-transform" 
@@ -315,7 +315,7 @@
                     
                     <div class="border border-gray-200 rounded-lg">
                         <button @click="openFaq = openFaq === 3 ? null : 3" 
-                                class="w-full text-left px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 rounded-lg">
+                                class="w-full text-start px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 rounded-lg">
                             <div class="flex items-center justify-between">
                                 <span class="font-medium text-gray-900">How does the spaced repetition work?</span>
                                 <svg class="w-5 h-5 text-gray-500 transform transition-transform" 
@@ -335,7 +335,7 @@
                     <a href="/docs/faq.md" target="_blank" 
                        class="inline-flex items-center text-blue-600 hover:text-blue-800">
                         <span>View complete FAQ</span>
-                        <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <svg class="w-4 h-4 ms-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
                         </svg>
                     </a>
@@ -406,7 +406,7 @@
 
 {{-- Help Panel Toggle Button --}}
 <button @click="$dispatch('toggle-help-panel')" 
-        class="fixed bottom-4 right-4 bg-blue-600 hover:bg-blue-700 text-white rounded-full p-3 shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 z-40 transition-colors duration-200"
+        class="fixed bottom-4 end-4 bg-blue-600 hover:bg-blue-700 text-white rounded-full p-3 shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 z-40 transition-colors duration-200"
         title="Open Help Center">
     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>

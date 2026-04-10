@@ -74,7 +74,7 @@
                        checked
                        class="rounded border-gray-300 text-blue-600 shadow-sm focus:border-blue-500 focus:ring-blue-500"
                        data-testid="required-checkbox">
-                <label for="required" class="ml-2 block text-sm text-gray-700">
+                <label for="required" class="ms-2 block text-sm text-gray-700">
                     {{ __('Required Topic') }}
                     <span class="text-gray-500 text-xs block">{{ __('Students must complete this topic to progress') }}</span>
                 </label>

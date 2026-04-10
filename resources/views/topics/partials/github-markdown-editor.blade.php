@@ -13,12 +13,12 @@
         <div class="flex md:hidden" x-show="isMobile">
             <button @click="toggleMobileMode('write')"
                     :class="!isPreviewMode ? 'bg-white border-gray-300 text-gray-900' : 'bg-transparent border-transparent text-gray-500'"
-                    class="px-3 py-1 text-sm font-medium border-r border-gray-200 rounded-l-md">
+                    class="px-3 py-1 text-sm font-medium border-e border-gray-200 rounded-s-md">
                 Write
             </button>
             <button @click="toggleMobileMode('preview')"
                     :class="isPreviewMode ? 'bg-white border-gray-300 text-gray-900' : 'bg-transparent border-transparent text-gray-500'"
-                    class="px-3 py-1 text-sm font-medium rounded-r-md">
+                    class="px-3 py-1 text-sm font-medium rounded-e-md">
                 Preview
             </button>
         </div>
@@ -72,7 +72,7 @@
                             <path d="M8 4v1h2l-2 10H6v1h6v-1h-2l2-10h2V4H8z"/>
                         </svg>
                     </button>
-                    <div class="border-l border-gray-300 h-4 mx-1"></div>
+                    <div class="border-s border-gray-300 h-4 mx-1"></div>
 
                     <!-- Headers -->
                     <button @click="insertMarkdown('heading1')"
@@ -84,7 +84,7 @@
                     <button @click="insertMarkdown('heading3')"
                             class="px-2 py-1 text-xs font-medium rounded hover:bg-gray-200"
                             title="Heading 3">H3</button>
-                    <div class="border-l border-gray-300 h-4 mx-1"></div>
+                    <div class="border-s border-gray-300 h-4 mx-1"></div>
 
                     <!-- Lists -->
                     <button @click="insertMarkdown('list')"
@@ -101,7 +101,7 @@
                             <path d="M3 2v2h1v1H3v1h2V5h1V2H3zM3 8v1h1v1H3v1h2v-1h1V8H3zM3 14v1h1v1H3v1h2v-1h1v-1H3zM7 3h11a1 1 0 110 2H7a1 1 0 110-2zM7 8h11a1 1 0 110 2H7a1 1 0 110-2zM7 13h11a1 1 0 110 2H7a1 1 0 110-2z"/>
                         </svg>
                     </button>
-                    <div class="border-l border-gray-300 h-4 mx-1"></div>
+                    <div class="border-s border-gray-300 h-4 mx-1"></div>
 
                     <!-- Links and Media -->
                     <button @click="insertMarkdown('link')"
@@ -118,7 +118,7 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/>
                         </svg>
                     </button>
-                    <div class="border-l border-gray-300 h-4 mx-1"></div>
+                    <div class="border-s border-gray-300 h-4 mx-1"></div>
 
                     <!-- Code -->
                     <button @click="insertMarkdown('code')"
@@ -137,7 +137,7 @@
                     </button>
 
                     <!-- More tools -->
-                    <div class="border-l border-gray-300 h-4 mx-1"></div>
+                    <div class="border-s border-gray-300 h-4 mx-1"></div>
                     <button @click="insertMarkdown('quote')"
                             class="p-1 rounded hover:bg-gray-200 tooltip"
                             title="Quote">
@@ -192,7 +192,7 @@ Code blocks are supported
 
             <!-- Upload Progress Indicators -->
             <div x-show="getUploadProgress().length > 0"
-                 class="absolute bottom-4 right-4 bg-white border border-gray-200 rounded-lg shadow-lg p-3 max-w-sm">
+                 class="absolute bottom-4 end-4 bg-white border border-gray-200 rounded-lg shadow-lg p-3 max-w-sm">
                 <template x-for="upload in getUploadProgress()" :key="upload.filename">
                     <div class="flex items-center space-x-2 mb-2 last:mb-0">
                         <div class="flex-1">
@@ -210,7 +210,7 @@ Code blocks are supported
 
         <!-- Preview Panel -->
         <div x-show="(showSplitView && !isMobile) || (isPreviewMode && isMobile)"
-             class="border-l border-gray-200 relative">
+             class="border-s border-gray-200 relative">
 
             <!-- Preview Header -->
             <div class="border-b border-gray-200 bg-gray-50 px-3 py-2">
@@ -308,9 +308,9 @@ Code blocks are supported
 .prose h2 { @apply text-xl font-bold mt-5 mb-3; }
 .prose h3 { @apply text-lg font-bold mt-4 mb-2; }
 .prose p { @apply mb-4; }
-.prose ul, .prose ol { @apply mb-4 pl-6; }
+.prose ul, .prose ol { @apply mb-4 ps-6; }
 .prose li { @apply mb-1; }
-.prose blockquote { @apply border-l-4 border-gray-300 pl-4 italic text-gray-600 mb-4; }
+.prose blockquote { @apply border-s-4 border-gray-300 ps-4 italic text-gray-600 mb-4; }
 .prose code { @apply bg-gray-100 px-1 py-0.5 rounded text-sm; }
 .prose pre { @apply bg-gray-900 text-green-400 p-4 rounded-lg overflow-x-auto mb-4; }
 .prose table { @apply border-collapse border border-gray-300 mb-4; }

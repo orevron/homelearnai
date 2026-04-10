@@ -2,9 +2,9 @@
 <div class="kanban-column bg-{{ $status === 'backlog' ? 'gray' : ($status === 'planned' ? 'blue' : ($status === 'scheduled' ? 'green' : 'purple')) }}-50 rounded-lg p-4" data-status="{{ $status }}">
   <div class="flex items-center justify-between mb-4">
     <h3 class="font-semibold text-gray-900 flex items-center">
-      <div class="w-3 h-3 bg-{{ $status === 'backlog' ? 'gray' : ($status === 'planned' ? 'blue' : ($status === 'scheduled' ? 'green' : 'purple')) }}-400 rounded-full mr-2"></div>
+      <div class="w-3 h-3 bg-{{ $status === 'backlog' ? 'gray' : ($status === 'planned' ? 'blue' : ($status === 'scheduled' ? 'green' : 'purple')) }}-400 rounded-full me-2"></div>
       {{ $statusTitle }}
-      <span class="ml-2 bg-{{ $status === 'backlog' ? 'gray' : ($status === 'planned' ? 'blue' : ($status === 'scheduled' ? 'green' : 'purple')) }}-200 text-{{ $status === 'backlog' ? 'gray' : ($status === 'planned' ? 'blue' : ($status === 'scheduled' ? 'green' : 'purple')) }}-700 px-2 py-1 text-xs rounded-full">
+      <span class="ms-2 bg-{{ $status === 'backlog' ? 'gray' : ($status === 'planned' ? 'blue' : ($status === 'scheduled' ? 'green' : 'purple')) }}-200 text-{{ $status === 'backlog' ? 'gray' : ($status === 'planned' ? 'blue' : ($status === 'scheduled' ? 'green' : 'purple')) }}-700 px-2 py-1 text-xs rounded-full">
         {{ $sessions->count() }}
       </span>
     </h3>

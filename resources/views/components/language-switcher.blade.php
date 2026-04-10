@@ -27,7 +27,7 @@
         <span class="sm:hidden font-medium">{{ strtoupper($currentLocale) }}</span>
         
         <!-- Loading spinner -->
-        <svg x-show="loading" class="animate-spin h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24">
+        <svg x-show="loading" class="animate-spin h-4 w-4 ms-1" fill="none" viewBox="0 0 24 24">
             <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
             <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
         </svg>
@@ -50,7 +50,7 @@
          x-transition:leave-start="transform opacity-100 scale-100"
          x-transition:leave-end="transform opacity-0 scale-95"
          x-cloak
-         class="absolute top-full right-0 mt-2 w-44 bg-white rounded-lg shadow-lg border border-gray-200 py-1 z-50">
+         class="absolute top-full end-0 mt-2 w-44 bg-white rounded-lg shadow-lg border border-gray-200 py-1 z-50">
         
         @foreach($locales as $localeCode => $localeData)
             <button @click="switchLanguage('{{ $localeCode }}')"
@@ -58,8 +58,8 @@
                     class="w-full flex items-center px-4 py-2 text-sm hover:bg-gray-50 transition-colors"
                     :class="currentLocale === '{{ $localeCode }}' ? 'text-blue-600 bg-blue-50' : 'text-gray-700'"
                     :disabled="loading || currentLocale === '{{ $localeCode }}'">
-                <span class="text-lg mr-3">{{ $localeData['flag'] }}</span>
-                <span class="flex-1 text-left font-medium">{{ $localeData['native'] }}</span>
+                <span class="text-lg me-3">{{ $localeData['flag'] }}</span>
+                <span class="flex-1 text-start font-medium">{{ $localeData['native'] }}</span>
                 <!-- Current indicator -->
                 <svg x-show="currentLocale === '{{ $localeCode }}'" 
                      class="w-4 h-4 text-blue-600" 

@@ -7,7 +7,7 @@
         @else
             <div class="space-y-4">
                 @foreach($analysis as $day => $data)
-                    <div class="border-l-4 @if($data['status'] === 'over') border-red-500 @elseif($data['status'] === 'warning') border-yellow-500 @else border-green-500 @endif pl-4">
+                    <div class="border-s-4 @if($data['status'] === 'over') border-red-500 @elseif($data['status'] === 'warning') border-yellow-500 @else border-green-500 @endif ps-4">
                         <div class="flex items-center justify-between mb-2">
                             <h4 class="font-medium">{{ ucfirst($day) }}</h4>
                             <span class="text-sm @if($data['status'] === 'over') text-red-600 @elseif($data['status'] === 'warning') text-yellow-600 @else text-green-600 @endif">
@@ -30,7 +30,7 @@
                             @endif
                             
                             @if(isset($data['sessions_count']))
-                                <span class="ml-2">{{ $data['sessions_count'] }} {{ __('sessions') }}</span>
+                                <span class="ms-2">{{ $data['sessions_count'] }} {{ __('sessions') }}</span>
                             @endif
                         </div>
                         

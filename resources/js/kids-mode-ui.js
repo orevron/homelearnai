@@ -233,7 +233,7 @@ class KidsModeUI {
                 warning: 'bg-yellow-500',
             };
 
-            toast.className = `${colors[type] || colors.info} text-white px-6 py-3 rounded-lg shadow-lg transform transition-all duration-300 translate-x-full fixed top-4 right-4 z-50`;
+            toast.className = `${colors[type] || colors.info} text-white px-6 py-3 rounded-lg shadow-lg transform transition-all duration-300 translate-x-full fixed top-4 end-4 z-50`;
             toast.textContent = message;
 
             document.body.appendChild(toast);

@@ -10,7 +10,7 @@
         @if(count($videos) > 0)
             <div class="bg-red-50 border border-red-200 rounded-lg p-4">
                 <h4 class="font-medium text-gray-900 mb-3 flex items-center">
-                    <svg class="w-4 h-4 mr-2 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg class="w-4 h-4 me-2 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h1m4 0h1m-6 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
                     </svg>
                     Videos ({{ count($videos) }})
@@ -46,7 +46,7 @@
                                     hx-target="#materials-section"
                                     hx-swap="outerHTML"
                                     hx-confirm="Are you sure you want to remove this video?"
-                                    class="ml-4 p-1 text-red-600 hover:text-red-800"
+                                    class="ms-4 p-1 text-red-600 hover:text-red-800"
                                     data-testid="remove-video-{{ $index }}">
                                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/>
@@ -62,7 +62,7 @@
         @if(count($links) > 0)
             <div class="bg-blue-50 border border-blue-200 rounded-lg p-4">
                 <h4 class="font-medium text-gray-900 mb-3 flex items-center">
-                    <svg class="w-4 h-4 mr-2 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg class="w-4 h-4 me-2 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/>
                     </svg>
                     Links ({{ count($links) }})
@@ -88,7 +88,7 @@
                                     hx-target="#materials-section"
                                     hx-swap="outerHTML"
                                     hx-confirm="Are you sure you want to remove this link?"
-                                    class="ml-4 p-1 text-red-600 hover:text-red-800"
+                                    class="ms-4 p-1 text-red-600 hover:text-red-800"
                                     data-testid="remove-link-{{ $index }}">
                                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/>
@@ -104,7 +104,7 @@
         @if(count($files) > 0)
             <div class="bg-green-50 border border-green-200 rounded-lg p-4">
                 <h4 class="font-medium text-gray-900 mb-3 flex items-center">
-                    <svg class="w-4 h-4 mr-2 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg class="w-4 h-4 me-2 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
                     </svg>
                     Files ({{ count($files) }})
@@ -150,7 +150,7 @@
                                     hx-target="#materials-section"
                                     hx-swap="outerHTML"
                                     hx-confirm="Are you sure you want to remove this file? This will permanently delete the file."
-                                    class="ml-4 p-1 text-red-600 hover:text-red-800"
+                                    class="ms-4 p-1 text-red-600 hover:text-red-800"
                                     data-testid="remove-file-{{ $index }}">
                                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/>

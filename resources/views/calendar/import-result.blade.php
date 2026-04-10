@@ -19,7 +19,7 @@
             <div class="p-6">
                 @if($result['success'])
                     <div class="flex items-center mb-4">
-                        <svg class="w-8 h-8 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <svg class="w-8 h-8 text-green-500 me-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                         </svg>
                         <h2 class="text-xl font-semibold text-green-800">{{ __('Import Successful') }}</h2>
@@ -51,9 +51,9 @@
                             <h3 class="text-lg font-medium text-red-800 mb-3">{{ __('Scheduling Conflicts') }}</h3>
                             <div class="space-y-2">
                                 @foreach($result['conflicts'] as $conflict)
-                                    <div class="p-3 bg-red-50 border-l-4 border-red-500 text-sm">
+                                    <div class="p-3 bg-red-50 border-s-4 border-red-500 text-sm">
                                         <strong>{{ $conflict['title'] ?? 'Event' }}</strong>
-                                        <span class="text-red-600 ml-2">{{ $conflict['message'] ?? 'Scheduling conflict detected' }}</span>
+                                        <span class="text-red-600 ms-2">{{ $conflict['message'] ?? 'Scheduling conflict detected' }}</span>
                                     </div>
                                 @endforeach
                             </div>
@@ -61,7 +61,7 @@
                     @endif
                 @else
                     <div class="flex items-center mb-4">
-                        <svg class="w-8 h-8 text-red-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <svg class="w-8 h-8 text-red-500 me-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                         </svg>
                         <h2 class="text-xl font-semibold text-red-800">{{ __('Import Failed') }}</h2>

@@ -57,7 +57,7 @@
                             name="import_file" 
                             accept=".apkg,.mem,.xml,.csv,.tsv,.txt"
                             class="block w-full text-sm text-gray-500
-                                file:mr-4 file:py-2 file:px-4
+                                file:me-4 file:py-2 file:px-4
                                 file:rounded-md file:border-0
                                 file:text-sm file:font-semibold
                                 file:bg-blue-50 file:text-blue-700

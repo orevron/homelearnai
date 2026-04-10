@@ -6,7 +6,7 @@
                 class="text-blue-600 hover:text-blue-800 text-sm font-medium flex items-center"
                 onclick="showExportOptions()"
                 data-testid="back-to-options">
-            <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg class="w-4 h-4 me-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
             </svg>
             Back to Export Options
@@ -64,7 +64,7 @@
         <div class="bg-gray-50 px-4 py-3 border-b border-gray-200">
             <div class="flex items-center">
                 <input type="checkbox" 
-                       class="mr-3" 
+                       class="me-3" 
                        :checked="allVisible"
                        @change="toggleAllVisible()"
                        data-testid="select-all-checkbox">
@@ -202,7 +202,7 @@
         </div>
         
         <div class="flex items-center mb-4">
-            <input type="checkbox" name="include_metadata" class="mr-2" checked>
+            <input type="checkbox" name="include_metadata" class="me-2" checked>
             <label class="text-sm text-gray-700">Include metadata (for JSON format)</label>
         </div>
         

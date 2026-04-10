@@ -96,11 +96,11 @@
                 
                 <div class="flex space-x-4">
                     <label class="flex items-center">
-                        <input type="radio" name="selection_mode" value="all" class="mr-2" checked>
+                        <input type="radio" name="selection_mode" value="all" class="me-2" checked>
                         <span class="text-sm">All cards ({{ $totalCards }})</span>
                     </label>
                     <label class="flex items-center">
-                        <input type="radio" name="selection_mode" value="selected" class="mr-2">
+                        <input type="radio" name="selection_mode" value="selected" class="me-2">
                         <span class="text-sm">Selected cards only</span>
                     </label>
                 </div>
@@ -129,7 +129,7 @@
                 <!-- JSON Options -->
                 <div class="json-options hidden">
                     <label class="flex items-center">
-                        <input type="checkbox" name="include_metadata" class="mr-2" checked>
+                        <input type="checkbox" name="include_metadata" class="me-2" checked>
                         <span class="text-sm">Include metadata (timestamps, IDs)</span>
                     </label>
                     <p class="text-xs text-gray-500 mt-1">
@@ -142,7 +142,7 @@
             @if($totalCards > $maxExportSize)
                 <div class="bg-yellow-50 border border-yellow-200 rounded-lg p-4 mb-6">
                     <div class="flex">
-                        <svg class="w-5 h-5 text-yellow-400 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <svg class="w-5 h-5 text-yellow-400 me-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L4.268 15.5c-.77.833.192 2.5 1.732 2.5z"/>
                         </svg>
                         <div>

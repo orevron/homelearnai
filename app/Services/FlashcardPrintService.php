@@ -276,6 +276,8 @@ class FlashcardPrintService
                 background: #fff;
                 margin: {$margins['top']}mm {$margins['right']}mm {$margins['bottom']}mm {$margins['left']}mm;
                 padding: 0;
+                direction: " . (app()->getLocale() === 'he' ? 'rtl' : 'ltr') . ";
+                text-align: " . (app()->getLocale() === 'he' ? 'right' : 'left') . ";
             }
             
             .print-wrapper {
@@ -653,7 +655,8 @@ class FlashcardPrintService
      */
     protected function generateFallbackHTML(EloquentCollection $flashcards, string $layout, array $options, string $css): string
     {
-        $html = "<!DOCTYPE html><html><head><title>Flashcards Print</title><style>{$css}</style></head><body>";
+        $dir = app()->getLocale() === 'he' ? 'rtl' : 'ltr';
+        $html = "<!DOCTYPE html><html dir='{$dir}'><head><title>Flashcards Print</title><style>{$css}</style></head><body>";
 
         foreach ($flashcards as $index => $flashcard) {
             /** @var \App\Models\Flashcard $flashcard */

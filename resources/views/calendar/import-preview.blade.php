@@ -25,7 +25,7 @@
                 @else
                     <div class="space-y-4">
                         @foreach($preview['events'] as $event)
-                            <div class="border-l-4 border-blue-500 pl-4 py-2">
+                            <div class="border-s-4 border-blue-500 ps-4 py-2">
                                 <h3 class="font-medium">{{ $event['title'] }}</h3>
                                 <p class="text-sm text-gray-600">
                                     {{ date('M j, Y g:i A', strtotime($event['start'])) }} - 

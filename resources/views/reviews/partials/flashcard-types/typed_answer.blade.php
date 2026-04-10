@@ -30,7 +30,7 @@
         <div class="text-center mb-6">
             <button onclick="checkTypedAnswer()" 
                     class="submit-btn bg-gradient-to-r from-purple-400 to-pink-500 text-white px-8 py-4 rounded-full text-xl font-bold shadow-xl hover:shadow-2xl transform hover:scale-110 transition-all duration-300">
-                <span class="text-2xl mr-2">✨</span>
+                <span class="text-2xl me-2">✨</span>
                 {{ __('Check Answer!') }}
             </button>
         </div>
@@ -81,7 +81,7 @@
         <div class="feedback-content mt-4 border-t pt-4" style="display: none;">
             <div class="feedback-message p-4 rounded"></div>
             @if($flashcard->hint)
-                <div class="mt-3 p-3 bg-yellow-50 rounded border-l-4 border-yellow-400">
+                <div class="mt-3 p-3 bg-yellow-50 rounded border-s-4 border-yellow-400">
                     <div class="text-sm text-gray-700">
                         <strong>{{ __('Hint') }}:</strong> {{ $flashcard->hint }}
                     </div>

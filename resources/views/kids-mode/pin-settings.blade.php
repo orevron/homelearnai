@@ -5,7 +5,7 @@
     <div class="bg-white shadow-sm rounded-lg">
         <div class="px-4 py-5 sm:p-6">
             <div class="flex items-center mb-6">
-                <svg class="w-8 h-8 text-blue-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg class="w-8 h-8 text-blue-600 me-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-1a1 1 0 00-1-1H7a1 1 0 00-1 1v1a2 2 0 002 2zM9 12l2 2 4-4m6-2a9 9 0 11-18 0 9 9 0 0118 0z"/>
                 </svg>
                 <div>
@@ -18,12 +18,12 @@
             <div class="mb-6">
                 <div class="flex items-center p-4 rounded-lg {{ $has_pin_setup ? 'bg-green-50 border border-green-200' : 'bg-yellow-50 border border-yellow-200' }}">
                     @if($has_pin_setup)
-                        <svg class="w-5 h-5 text-green-600 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                        <svg class="w-5 h-5 text-green-600 me-2" fill="currentColor" viewBox="0 0 20 20">
                             <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
                         </svg>
                         <span class="text-green-800 font-medium">{{ __('pin_is_set') }}</span>
                     @else
-                        <svg class="w-5 h-5 text-yellow-600 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                        <svg class="w-5 h-5 text-yellow-600 me-2" fill="currentColor" viewBox="0 0 20 20">
                             <path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/>
                         </svg>
                         <span class="text-yellow-800 font-medium">{{ __('pin_not_set') }}</span>
@@ -66,7 +66,7 @@
                                        placeholder="••••">
                                 <button type="button" 
                                         id="toggle-pin" 
-                                        class="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-500 hover:text-gray-700"
+                                        class="absolute end-3 top-1/2 transform -translate-y-1/2 text-gray-500 hover:text-gray-700"
                                         aria-label="{{ __('Show/hide PIN') }}">
                                     <svg id="eye-open" class="w-5 h-5 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
@@ -123,25 +123,25 @@
                 <h3 class="text-lg font-semibold text-blue-900 mb-3">{{ __('Security Information') }}</h3>
                 <ul class="space-y-2 text-blue-800">
                     <li class="flex items-start">
-                        <svg class="w-5 h-5 text-blue-600 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                        <svg class="w-5 h-5 text-blue-600 me-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                             <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
                         </svg>
                         {{ __('Your PIN is encrypted and securely stored') }}
                     </li>
                     <li class="flex items-start">
-                        <svg class="w-5 h-5 text-blue-600 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                        <svg class="w-5 h-5 text-blue-600 me-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                             <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
                         </svg>
                         {{ __('After 5 failed attempts, PIN entry is locked for 5 minutes') }}
                     </li>
                     <li class="flex items-start">
-                        <svg class="w-5 h-5 text-blue-600 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                        <svg class="w-5 h-5 text-blue-600 me-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                             <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
                         </svg>
                         {{ __('Only use digits 0-9 for your PIN') }}
                     </li>
                     <li class="flex items-start">
-                        <svg class="w-5 h-5 text-blue-600 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                        <svg class="w-5 h-5 text-blue-600 me-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                             <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
                         </svg>
                         {{ __('Choose a PIN that children cannot easily guess') }}

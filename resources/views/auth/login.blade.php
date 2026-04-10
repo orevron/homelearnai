@@ -34,7 +34,7 @@
         <div class="block mt-4">
             <label for="remember_me" class="inline-flex items-center">
                 <input id="remember_me" type="checkbox" class="rounded border-gray-300 text-indigo-600 shadow-sm" name="remember">
-                <span class="ml-2 text-sm text-gray-600">{{ __('Remember me') }}</span>
+                <span class="ms-2 text-sm text-gray-600">{{ __('Remember me') }}</span>
             </label>
         </div>
 
@@ -53,7 +53,7 @@
                 @endif
             </div>
 
-            <button type="submit" class="ml-3 bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700">
+            <button type="submit" class="ms-3 bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700">
                 {{ __('Log in') }}
             </button>
         </div>

@@ -1428,7 +1428,7 @@ window.unifiedMarkdownEditor = () => ({
     // Show notification with enhanced styling
     showNotification(message, type = 'info') {
         const notification = document.createElement('div');
-        notification.className = `fixed top-4 right-4 p-4 rounded-lg z-50 transition-all duration-300 shadow-lg ${
+        notification.className = `fixed top-4 end-4 p-4 rounded-lg z-50 transition-all duration-300 shadow-lg ${
             type === 'error' ? 'bg-red-500 text-white' :
             type === 'success' ? 'bg-green-500 text-white' :
             type === 'warning' ? 'bg-yellow-500 text-white' :

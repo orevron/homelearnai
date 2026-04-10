@@ -19,10 +19,10 @@
         'xl' => 'w-96'
     ];
     $positionClasses = [
-        'top' => 'bottom-full left-1/2 transform -translate-x-1/2 mb-2',
-        'bottom' => 'top-full left-1/2 transform -translate-x-1/2 mt-2',
-        'left' => 'right-full top-1/2 transform -translate-y-1/2 mr-2',
-        'right' => 'left-full top-1/2 transform -translate-y-1/2 ml-2'
+        'top' => 'bottom-full start-1/2 transform -translate-x-1/2 mb-2',
+        'bottom' => 'top-full start-1/2 transform -translate-x-1/2 mt-2',
+        'left' => 'end-full top-1/2 transform -translate-y-1/2 me-2',
+        'right' => 'start-full top-1/2 transform -translate-y-1/2 ms-2'
     ];
     $themeClasses = [
         'light' => 'bg-white text-gray-800 border border-gray-200 shadow-lg',
@@ -88,18 +88,18 @@
         x-cloak
     >
         <!-- Tooltip Arrow -->
-        <div class="absolute {{ $position === 'top' ? 'top-full left-1/2 transform -translate-x-1/2' : 
-                                ($position === 'bottom' ? 'bottom-full left-1/2 transform -translate-x-1/2' : 
-                                ($position === 'left' ? 'left-full top-1/2 transform -translate-y-1/2' : 
-                                'right-full top-1/2 transform -translate-y-1/2')) }}">
+        <div class="absolute {{ $position === 'top' ? 'top-full start-1/2 transform -translate-x-1/2' : 
+                                ($position === 'bottom' ? 'bottom-full start-1/2 transform -translate-x-1/2' : 
+                                ($position === 'left' ? 'start-full top-1/2 transform -translate-y-1/2' : 
+                                'end-full top-1/2 transform -translate-y-1/2')) }}">
             @if($position === 'top')
-                <div class="w-2 h-2 {{ str_replace('bg-', 'bg-', $themeClasses[$theme]) }} transform rotate-45 border-r border-b {{ str_contains($themeClasses[$theme], 'border-gray-200') ? 'border-gray-200' : (str_contains($themeClasses[$theme], 'border-gray-600') ? 'border-gray-600' : 'border-blue-200') }}"></div>
+                <div class="w-2 h-2 {{ str_replace('bg-', 'bg-', $themeClasses[$theme]) }} transform rotate-45 border-e border-b {{ str_contains($themeClasses[$theme], 'border-gray-200') ? 'border-gray-200' : (str_contains($themeClasses[$theme], 'border-gray-600') ? 'border-gray-600' : 'border-blue-200') }}"></div>
             @elseif($position === 'bottom')
-                <div class="w-2 h-2 {{ str_replace('bg-', 'bg-', $themeClasses[$theme]) }} transform rotate-45 border-l border-t {{ str_contains($themeClasses[$theme], 'border-gray-200') ? 'border-gray-200' : (str_contains($themeClasses[$theme], 'border-gray-600') ? 'border-gray-600' : 'border-blue-200') }}"></div>
+                <div class="w-2 h-2 {{ str_replace('bg-', 'bg-', $themeClasses[$theme]) }} transform rotate-45 border-s border-t {{ str_contains($themeClasses[$theme], 'border-gray-200') ? 'border-gray-200' : (str_contains($themeClasses[$theme], 'border-gray-600') ? 'border-gray-600' : 'border-blue-200') }}"></div>
             @elseif($position === 'left')
-                <div class="w-2 h-2 {{ str_replace('bg-', 'bg-', $themeClasses[$theme]) }} transform rotate-45 border-t border-r {{ str_contains($themeClasses[$theme], 'border-gray-200') ? 'border-gray-200' : (str_contains($themeClasses[$theme], 'border-gray-600') ? 'border-gray-600' : 'border-blue-200') }}"></div>
+                <div class="w-2 h-2 {{ str_replace('bg-', 'bg-', $themeClasses[$theme]) }} transform rotate-45 border-t border-e {{ str_contains($themeClasses[$theme], 'border-gray-200') ? 'border-gray-200' : (str_contains($themeClasses[$theme], 'border-gray-600') ? 'border-gray-600' : 'border-blue-200') }}"></div>
             @else
-                <div class="w-2 h-2 {{ str_replace('bg-', 'bg-', $themeClasses[$theme]) }} transform rotate-45 border-b border-l {{ str_contains($themeClasses[$theme], 'border-gray-200') ? 'border-gray-200' : (str_contains($themeClasses[$theme], 'border-gray-600') ? 'border-gray-600' : 'border-blue-200') }}"></div>
+                <div class="w-2 h-2 {{ str_replace('bg-', 'bg-', $themeClasses[$theme]) }} transform rotate-45 border-b border-s {{ str_contains($themeClasses[$theme], 'border-gray-200') ? 'border-gray-200' : (str_contains($themeClasses[$theme], 'border-gray-600') ? 'border-gray-600' : 'border-blue-200') }}"></div>
             @endif
         </div>
 
@@ -107,7 +107,7 @@
         @if($title && $title !== 'Help')
             <div class="font-medium text-sm mb-2 flex items-center">
                 @if($theme === 'kids')
-                    <span class="mr-1">💡</span>
+                    <span class="me-1">💡</span>
                 @endif
                 {{ $title }}
             </div>
@@ -127,7 +127,7 @@
             <button 
                 type="button"
                 @click="hideTooltip()"
-                class="absolute top-1 right-1 text-gray-400 hover:text-gray-600 focus:outline-none"
+                class="absolute top-1 end-1 text-gray-400 hover:text-gray-600 focus:outline-none"
             >
                 <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
                     <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/>

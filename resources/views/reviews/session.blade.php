@@ -6,7 +6,7 @@
             <div class="flex items-center justify-between">
                 <div class="flex items-center">
                     <h2 class="text-xl font-semibold text-gray-900">Review Session</h2>
-                    <span class="ml-3 inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800">
+                    <span class="ms-3 inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800">
                         {{ $child->name }}
                     </span>
                 </div>

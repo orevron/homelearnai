@@ -37,7 +37,7 @@
                     : [7, 1, 2, 3, 4, 5, 6]; // Sunday = 7, Monday = 1
             @endphp
             @foreach($weekDays as $dayKey)
-                <div class="p-4 text-center font-medium text-gray-700 bg-gray-50 border-r border-gray-200 last:border-r-0">
+                <div class="p-4 text-center font-medium text-gray-700 bg-gray-50 border-e border-gray-200 last:border-e-0">
                     <div class="hidden md:block">{{ __($dayKey) }}</div>
                     <div class="md:hidden">{{ substr(__($dayKey), 0, 3) }}</div>
                 </div>

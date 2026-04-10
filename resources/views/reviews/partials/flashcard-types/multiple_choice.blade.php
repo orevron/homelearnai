@@ -21,10 +21,10 @@
         <div class="choices-container space-y-4">
             @foreach($flashcard->choices as $index => $choice)
                 <button onclick="selectChoice({{ $index }})" 
-                        class="choice-btn w-full p-4 bg-white rounded-2xl shadow-lg border-3 border-purple-200 text-left hover:bg-purple-50 hover:border-purple-400 transition-all duration-300 transform hover:scale-105"
+                        class="choice-btn w-full p-4 bg-white rounded-2xl shadow-lg border-3 border-purple-200 text-start hover:bg-purple-50 hover:border-purple-400 transition-all duration-300 transform hover:scale-105"
                         data-choice-index="{{ $index }}">
                     <div class="flex items-center">
-                        <div class="w-8 h-8 rounded-full border-2 border-purple-300 flex items-center justify-center mr-4 choice-indicator">
+                        <div class="w-8 h-8 rounded-full border-2 border-purple-300 flex items-center justify-center me-4 choice-indicator">
                             <span class="text-sm font-bold">{{ chr(65 + $index) }}</span>
                         </div>
                         <span class="text-lg font-medium">{{ $choice }}</span>
@@ -62,10 +62,10 @@
         <div class="choices-container space-y-3">
             @foreach($flashcard->choices as $index => $choice)
                 <button onclick="selectChoice({{ $index }})" 
-                        class="choice-btn w-full p-4 bg-white rounded border border-gray-300 text-left hover:bg-blue-50 hover:border-blue-300 transition-colors"
+                        class="choice-btn w-full p-4 bg-white rounded border border-gray-300 text-start hover:bg-blue-50 hover:border-blue-300 transition-colors"
                         data-choice-index="{{ $index }}">
                     <div class="flex items-center">
-                        <div class="w-6 h-6 rounded-full border border-gray-400 flex items-center justify-center mr-3 choice-indicator">
+                        <div class="w-6 h-6 rounded-full border border-gray-400 flex items-center justify-center me-3 choice-indicator">
                             <span class="text-sm">{{ chr(65 + $index) }}</span>
                         </div>
                         <span>{{ $choice }}</span>
@@ -78,7 +78,7 @@
         <div class="feedback-content mt-4 border-t pt-4" style="display: none;">
             <div class="feedback-message p-4 rounded"></div>
             @if($flashcard->hint)
-                <div class="mt-3 p-3 bg-yellow-50 rounded border-l-4 border-yellow-400">
+                <div class="mt-3 p-3 bg-yellow-50 rounded border-s-4 border-yellow-400">
                     <div class="text-sm text-gray-700">
                         <strong>{{ __('Hint') }}:</strong> {{ $flashcard->hint }}
                     </div>

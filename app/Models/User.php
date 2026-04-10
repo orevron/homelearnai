@@ -32,6 +32,7 @@ class User extends Authenticatable implements MustVerifyEmail
     public const AVAILABLE_LOCALES = [
         'en' => 'English',
         'ru' => 'Русский',
+        'he' => 'עברית',
     ];
 
     /**
@@ -193,6 +194,13 @@ class User extends Authenticatable implements MustVerifyEmail
                 'week_start' => 'monday',
                 'date_format_type' => 'eu',
                 'date_format' => 'd.m.Y',
+            ],
+            'he' => [
+                'region_format' => 'eu',
+                'time_format' => '24h',
+                'week_start' => 'sunday',
+                'date_format_type' => 'eu',
+                'date_format' => 'd/m/Y',
             ],
             'en' => [
                 'region_format' => 'us',

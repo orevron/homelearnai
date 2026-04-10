@@ -15,7 +15,7 @@
       <h4 class="text-sm font-medium text-gray-900 truncate">{{ $topic?->title ?? __('unknown_topic') }}</h4>
       @if($subject)
       <div class="flex items-center mt-1">
-        <div class="w-2 h-2 rounded-full mr-1" style="background-color: {{ $subject->color }}"></div>
+        <div class="w-2 h-2 rounded-full me-1" style="background-color: {{ $subject->color }}"></div>
         <span class="text-xs text-gray-600">{{ $subject->name }}</span>
       </div>
       @endif
@@ -45,7 +45,7 @@
   <!-- Duration -->
   <div class="flex items-center justify-between mb-2">
     <div class="flex items-center text-xs text-gray-600">
-      <svg class="w-3 h-3 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <svg class="w-3 h-3 me-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
       </svg>
       {{ $session->getFormattedDuration() }}
@@ -127,7 +127,7 @@
       </button>
       
       <div x-show="open" @click.away="open = false" 
-           class="absolute right-0 bottom-full mb-1 w-40 bg-white rounded-md shadow-lg z-10 border">
+           class="absolute end-0 bottom-full mb-1 w-40 bg-white rounded-md shadow-lg z-10 border">
         <div class="py-1">
           <!-- Change Commitment Type -->
           <div class="px-3 py-2 text-xs text-gray-500 font-medium">{{ __('commitment_type') }}</div>
@@ -138,7 +138,7 @@
               hx-vals='{"commitment_type": "{{ $type }}"}'
               hx-target="closest .session-card"
               hx-swap="outerHTML"
-              class="block w-full text-left px-3 py-2 text-xs text-gray-700 hover:bg-gray-100"
+              class="block w-full text-start px-3 py-2 text-xs text-gray-700 hover:bg-gray-100"
             >
               {{ $label }}
             </button>
@@ -153,7 +153,7 @@
             hx-confirm="{{ __('are_you_sure_you_want_to_delete_this_session') }}"
             hx-target="closest .session-card"
             hx-swap="outerHTML"
-            class="block w-full text-left px-3 py-2 text-xs text-red-600 hover:bg-red-50"
+            class="block w-full text-start px-3 py-2 text-xs text-red-600 hover:bg-red-50"
           >
             {{ __('delete_session') }}
           </button>

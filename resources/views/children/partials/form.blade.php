@@ -7,7 +7,7 @@
         <div @click="$el.closest('[data-testid=child-modal-overlay]').remove()" class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity"></div>
 
         <!-- Modal -->
-        <div class="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full relative z-10" data-testid="modal-content">
+        <div class="inline-block align-bottom bg-white rounded-lg text-start overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full relative z-10" data-testid="modal-content">
             <form hx-post="{{ isset($child->id) ? route('children.update', $child->id) : route('children.store') }}"
                   hx-target="{{ isset($child->id) ? '#child-' . $child->id : '#children-list' }}"
                   hx-swap="{{ isset($child->id) ? 'outerHTML' : 'innerHTML' }}"
@@ -70,7 +70,7 @@
                         @if(isset($child->grade))
                         <div class="bg-blue-50 border border-blue-200 rounded-lg p-3">
                             <div class="flex">
-                                <svg class="w-5 h-5 text-blue-400 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <svg class="w-5 h-5 text-blue-400 me-2" fill="currentColor" viewBox="0 0 20 20">
                                     <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"/>
                                 </svg>
                                 <div class="text-sm">

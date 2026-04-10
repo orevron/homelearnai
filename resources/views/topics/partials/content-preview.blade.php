@@ -6,7 +6,7 @@
         <div class="flex items-center space-x-4 flex-wrap gap-y-2">
             @if(isset($metadata['word_count']) && $metadata['word_count'] > 0)
             <span class="flex items-center">
-                <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg class="w-4 h-4 me-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
                 </svg>
                 {{ $metadata['word_count'] }} words
@@ -15,7 +15,7 @@
 
             @if(isset($metadata['reading_time']) && $metadata['reading_time'] > 0)
             <span class="flex items-center">
-                <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg class="w-4 h-4 me-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                 </svg>
                 {{ $metadata['reading_time'] }} min read
@@ -178,22 +178,22 @@
     }
 
     .rich-content-preview .callout.warning {
-        border-left-color: #f59e0b;
+        border-start-color: #f59e0b;
         background-color: #fffbeb;
     }
 
     .rich-content-preview .callout.error {
-        border-left-color: #ef4444;
+        border-start-color: #ef4444;
         background-color: #fef2f2;
     }
 
     .rich-content-preview .callout.success {
-        border-left-color: #10b981;
+        border-start-color: #10b981;
         background-color: #f0fdf4;
     }
 
     .rich-content-preview .callout.note {
-        border-left-color: #6b7280;
+        border-start-color: #6b7280;
         background-color: #f9fafb;
     }
 

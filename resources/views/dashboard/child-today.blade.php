@@ -42,7 +42,7 @@
                     <p class="text-blue-100 mt-1">{{ date('l, F j, Y') }} - {{ __('Let\'s make today amazing!') }}</p>
                 @endif
             </div>
-            <div class="text-right">
+            <div class="text-end">
                 @if($kidsMode)
                     <div class="bg-white/20 rounded-full p-6 backdrop-blur-sm">
                         <div class="text-5xl font-bold drop-shadow-lg">{{ $today_sessions->count() }}</div>
@@ -95,7 +95,7 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
                         </svg>
                     </div>
-                    <div class="ml-4">
+                    <div class="ms-4">
                         <p class="text-sm font-medium text-green-600">{{ __('Today\'s Sessions') }}</p>
                         <p class="text-2xl font-bold text-green-900">{{ $today_sessions->count() }}</p>
                     </div>
@@ -109,7 +109,7 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
                         </svg>
                     </div>
-                    <div class="ml-4">
+                    <div class="ms-4">
                         <p class="text-sm font-medium text-blue-600">{{ __('Review Queue') }}</p>
                         <p class="text-2xl font-bold text-blue-900">{{ $review_queue->count() }}</p>
                     </div>
@@ -123,7 +123,7 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
                         </svg>
                     </div>
-                    <div class="ml-4">
+                    <div class="ms-4">
                         <p class="text-sm font-medium text-purple-600">{{ __('Independence') }}</p>
                         <p class="text-lg font-bold text-purple-900">{{ __('Level :level', ['level' => $child->independence_level]) }}</p>
                     </div>
@@ -138,7 +138,7 @@
             <div class="flex items-center justify-between">
                 @if($kidsMode)
                     <h3 class="text-2xl font-bold text-purple-800 flex items-center">
-                        <div class="text-3xl mr-3">🎪</div>
+                        <div class="text-3xl me-3">🎪</div>
                         {{ __('Learning Adventures') }}
                     </h3>
                     @if($can_reorder)
@@ -146,7 +146,7 @@
                     @endif
                 @else
                     <h3 class="text-lg font-semibold text-gray-900 flex items-center">
-                        <svg class="w-5 h-5 text-green-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <svg class="w-5 h-5 text-green-600 me-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
                         </svg>
                         {{ __('Today\'s Sessions') }}
@@ -175,17 +175,17 @@
                                     <div class="flex items-center justify-between mb-4">
                                         <div class="flex items-center">
                                             @if($can_reorder)
-                                                <div class="text-2xl mr-3 cursor-move">🎯</div>
+                                                <div class="text-2xl me-3 cursor-move">🎯</div>
                                             @endif
                                             <div>
                                                 <h4 class="text-2xl font-bold drop-shadow-lg">
                                                     {{ $session->topic->title ?? __('Learning Quest #:id', ['id' => $session->id]) }}
                                                 </h4>
                                                 <div class="flex items-center text-lg font-semibold opacity-90 mt-1">
-                                                    <span class="mr-2">⏰</span>
+                                                    <span class="me-2">⏰</span>
                                                     <span>{{ __(':minutes mins', ['minutes' => $session->estimated_minutes]) }}</span>
                                                     @if($session->scheduled_start_time)
-                                                        <span class="ml-4 mr-2">🕒</span>
+                                                        <span class="ms-4 me-2">🕒</span>
                                                         <span>{{ Carbon\Carbon::parse($session->scheduled_start_time)->translatedFormat('g:i A') }}</span>
                                                     @endif
                                                 </div>
@@ -239,7 +239,7 @@
                                     <div class="flex items-center space-x-3">
                                         @if($session->status === 'completed')
                                             <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-green-100 text-green-800">
-                                                <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                                                <svg class="w-4 h-4 me-1" fill="currentColor" viewBox="0 0 20 20">
                                                     <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
                                                 </svg>
                                                 {{ __('Complete!') }}
@@ -330,7 +330,7 @@
                     <p class="text-xl font-semibold text-yellow-100 mb-6">{{ __('Show off what you remember!') }}</p>
                     <a href="{{ route('reviews.session', $child->id) }}" 
                        class="inline-flex items-center bg-gradient-to-r from-yellow-400 to-orange-500 text-purple-800 px-10 py-5 rounded-full text-2xl font-bold shadow-2xl hover:shadow-3xl transform hover:scale-110 transition-all duration-300 border-4 border-white">
-                        <span class="text-3xl mr-3">🚀</span>
+                        <span class="text-3xl me-3">🚀</span>
                         {{ __('Start Star Quest!') }}
                     </a>
                 </div>
@@ -338,7 +338,7 @@
                 <!-- Regular Mode Review Section -->
                 <div class="px-6 py-4 border-b border-gray-200">
                     <h3 class="text-lg font-semibold text-gray-900 flex items-center">
-                        <svg class="w-5 h-5 text-blue-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <svg class="w-5 h-5 text-blue-600 me-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
                         </svg>
                         {{ trans_choice('Quick Review (:count item)|Quick Review (:count items)', $review_queue->count(), ['count' => $review_queue->count()]) }}
@@ -349,7 +349,7 @@
                         <p class="text-gray-600 mb-4">{{ __('Let\'s review some things you\'ve learned before!') }}</p>
                         <a href="{{ route('reviews.session', $child->id) }}" 
                            class="inline-flex items-center bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition">
-                            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg class="w-5 h-5 me-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
                             </svg>
                             {{ __('Start Review Session') }}
@@ -365,11 +365,11 @@
         <div class="bg-white rounded-lg shadow-sm">
             <div class="px-6 py-4 border-b border-gray-200">
                 <h3 class="text-lg font-semibold text-gray-900 flex items-center">
-                    <svg class="w-5 h-5 text-purple-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg class="w-5 h-5 text-purple-600 me-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
                     </svg>
                     {{ __('This Week\'s Plan') }}
-                    <span class="ml-2 text-sm bg-purple-100 text-purple-700 px-2 py-1 rounded">{{ __('You can move sessions!') }}</span>
+                    <span class="ms-2 text-sm bg-purple-100 text-purple-700 px-2 py-1 rounded">{{ __('You can move sessions!') }}</span>
                 </h3>
             </div>
             <div class="p-6">
@@ -598,7 +598,7 @@
     // === KIDS MODE SECURITY PROTECTIONS ===
     @if(session('kids_mode_active'))
     
-    // 1. Disable right-click context menu
+    // 1. Disable end-click context menu
     document.addEventListener('contextmenu', function(e) {
         e.preventDefault();
         return false;

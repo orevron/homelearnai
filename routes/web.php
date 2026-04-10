@@ -271,7 +271,7 @@ Route::middleware('auth')->group(function () {
 // Translation files for JavaScript
 Route::get('/lang/{locale}.json', function ($locale) {
     // Validate locale to prevent directory traversal
-    if (! in_array($locale, ['en', 'ru'])) {
+    if (! in_array($locale, ['en', 'ru', 'he'])) {
         abort(404);
     }
 

@@ -132,7 +132,7 @@
         <div class="feedback-content mt-4 border-t pt-4" style="display: none;">
             <div class="feedback-message p-4 rounded"></div>
             @if($flashcard->hint)
-                <div class="mt-3 p-3 bg-yellow-50 rounded border-l-4 border-yellow-400">
+                <div class="mt-3 p-3 bg-yellow-50 rounded border-s-4 border-yellow-400">
                     <div class="text-sm text-gray-700">
                         <strong>{{ __('Hint') }}:</strong> {{ $flashcard->hint }}
                     </div>
