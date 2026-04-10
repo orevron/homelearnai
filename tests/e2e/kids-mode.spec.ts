@@ -438,7 +438,7 @@ test.describe('Kids Mode - Complete Functionality', () => {
     const childInfo = await kidsModeHelper.setupPin('1234');
     
     // Test different languages
-    const languages = ['en', 'ru']; // Add more as available
+    const languages = ['en', 'ru', 'he']; // Add more as available
     
     for (const lang of languages) {
       // Change language

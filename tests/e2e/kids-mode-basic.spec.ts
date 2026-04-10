@@ -420,7 +420,7 @@ test.describe('Kids Mode - Basic Functionality', () => {
 
   test('Internationalization Support', async ({ page }) => {
     // Test different languages
-    const languages = ['en', 'ru'];
+    const languages = ['en', 'ru', 'he'];
     
     for (const lang of languages) {
       // Change language
