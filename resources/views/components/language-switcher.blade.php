@@ -115,12 +115,14 @@
                     const data = await response.json();
                     
                     if (data.success) {
+                        const oldLocale = this.currentLocale;
                         // Update component state
                         this.currentLocale = locale;
                         window.currentLocale = locale;
                         
                         // Check if we're on an authentication page (login, register, etc.)
                         const isAuthPage = window.location.pathname.match(/^\/(login|register|password|auth)/);
+                        const needsDirectionChange = (oldLocale === 'he' && locale !== 'he') || (oldLocale !== 'he' && locale === 'he');
                         
                         @if(config('app.env') === 'testing')
                         // In testing environment, always reload to ensure session-based locale is shown
@@ -128,8 +130,8 @@
                         console.log('Testing environment: reloading page for reliable locale switch');
                         window.location.reload();
                         @else
-                        if (isAuthPage) {
-                            // For auth pages, reload immediately to get server-rendered translations
+                        if (isAuthPage || needsDirectionChange) {
+                            // For auth pages or direction changes, reload immediately to get server-rendered translations
                             window.location.reload();
                         } else {
                             // For other pages, try dynamic update
