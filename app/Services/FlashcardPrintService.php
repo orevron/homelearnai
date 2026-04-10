@@ -322,7 +322,7 @@ class FlashcardPrintService
                 border-radius: 3px;
                 font-size: 75%;
                 font-weight: bold;
-                margin-left: 4px;
+                margin-" . (app()->getLocale() === 'he' ? 'right' : 'left') . ": 4px;
             }
             
             .difficulty-easy { background: #d4edda; color: #155724; }
@@ -331,7 +331,8 @@ class FlashcardPrintService
             
             .choices-list {
                 list-style: none;
-                padding-left: 0;
+                padding-inline-start: 0;
+                padding-left: 0; /* Fallback */
                 margin: 6px 0;
             }
             
@@ -370,9 +371,9 @@ class FlashcardPrintService
                 background: #f0f0f0;
                 padding: 1px 4px;
                 border-radius: 2px;
-                margin-right: 4px;
+                margin-" . (app()->getLocale() === 'he' ? 'left' : 'right') . ": 4px;
             }
-        ";
+        \";
     }
 
     /**
@@ -387,7 +388,7 @@ class FlashcardPrintService
                 border: 1px solid #000;
                 margin: 0.25in;
                 padding: 0.125in;
-                float: left;
+                float: " . (app()->getLocale() === 'he' ? 'right' : 'left') . ";
                 box-sizing: border-box;
             }
             
@@ -414,12 +415,12 @@ class FlashcardPrintService
             .cut-line::before {
                 content: '✂';
                 position: absolute;
-                left: -15px;
+                " . (app()->getLocale() === 'he' ? 'right' : 'left') . ": -15px;
                 top: -8px;
                 font-size: 12px;
                 color: #999;
             }
-        ";
+        \";
     }
 
     /**
@@ -489,7 +490,7 @@ class FlashcardPrintService
             .fold-line::before {
                 content: 'FOLD HERE';
                 position: absolute;
-                right: 10px;
+                " . (app()->getLocale() === 'he' ? 'left' : 'right') . ": 10px;
                 top: -10px;
                 background: white;
                 padding: 0 4px;
@@ -539,7 +540,7 @@ class FlashcardPrintService
             }
             
             .study-answer {
-                margin-left: 20px;
+                margin-" . (app()->getLocale() === 'he' ? 'right' : 'left') . ": 20px;
                 margin-bottom: 6px;
             }
             
