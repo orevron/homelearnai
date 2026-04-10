@@ -43,7 +43,7 @@ class ProfileController extends Controller
     public function updatePreferences(Request $request): RedirectResponse
     {
         $validated = $request->validate([
-            'locale' => ['required', 'string', 'in:en,ru'],
+            'locale' => ['required', 'string', 'in:en,ru,he'],
             'timezone' => ['required', 'string'],
             'date_format' => ['required', 'string'],
             'region_format' => ['required', 'string', 'in:us,eu,custom'],
